@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sienna Muse — Design System & Interactive Component Library</title>
+  
+  <!-- Fonts Loading -->
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&f[]=erode@300,400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+  <!-- Iconify Library -->
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+  <!-- Tailwind PlayCDN with Custom Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            siennaBg: '#FDFBF7',
+            siennaPrimary: '#A0522D',
+            siennaSecondary: '#6B8E23',
+            siennaTertiary: '#E2725B',
+            siennaDark: '#3E3B39',
+            siennaLight: '#5C5854',
+            siennaHighlight: '#F5F2ED',
+          },
+          fontFamily: {
+            serif: ['Erode', 'Georgia', 'serif'],
+            handwritten: ['Dancing Script', 'cursive'],
+            sans: ['Satoshi', 'sans-serif'],
+          },
+          borderRadius: {
+            'organic': '63% 37% 54% 46% / 45% 48% 52% 55%',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Link custom CSS stylesheet -->
+  <link rel="stylesheet" href="index.css">
+
+  <style>
+    /* Styling documentation helpers */
+    .docs-section {
+      border-bottom: 1px solid rgba(62, 59, 57, 0.1);
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    .code-box {
+      background-color: #F5F2ED;
+      border: 1px solid rgba(62, 59, 57, 0.1);
+      font-family: monospace;
+      font-size: 0.8rem;
+      padding: 1rem;
+      overflow-x: auto;
+      margin-top: 1rem;
+      color: #5C5854;
+    }
+  </style>
+</head>
+<body class="bg-siennaBg text-siennaDark font-sans selection:bg-siennaPrimary/20">
+
+  <!-- Style guide static header -->
+  <header class="bg-siennaHighlight border-b border-siennaDark/10 py-12 px-8 md:px-16">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+      <div>
+        <span class="font-handwritten text-3xl text-siennaPrimary block mb-1">Design System Documentation</span>
+        <h1 class="font-serif text-4xl md:text-5xl font-medium tracking-wide text-siennaDark">Sienna Muse — Component Library</h1>
+        <p class="text-siennaLight font-light text-sm mt-2 max-w-2xl leading-relaxed">
+          This living reference stylesheet documents our organic minimalist tokens, bohemian color structures, typography scales, spacing ratios, and responsive UI specs.
+        </p>
+      </div>
+      <a href="index.html" class="px-6 py-3 bg-siennaPrimary text-siennaBg hover:bg-siennaDark text-xs font-bold uppercase tracking-widest transition-colors flex items-center group shadow-md">
+        Back to Live Portfolio
+        <iconify-icon icon="ph:arrow-right-thin" class="ml-2 text-base transition-transform duration-300 group-hover:translate-x-1"></iconify-icon>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Grid Layout -->
+  <main class="max-w-7xl mx-auto px-8 md:px-16 py-12">
+    
+    <!-- SECTION 1: COLOR PALETTE -->
+    <section class="docs-section">
+      <h2 class="font-serif text-3xl text-siennaDark mb-4">01. Harmony Swatches</h2>
+      <p class="text-siennaLight font-light text-sm leading-relaxed mb-8 max-w-3xl">
+        Our color system blends coastal clay pigments with off-white textured plaster backgrounds and foliage olive greens, representing natural, rustic bohemian luxury.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
+        <!-- Color 1 -->
+        <div class="flex flex-col bg-siennaBg border border-siennaDark/10 p-3 shadow-sm">
+          <div class="w-full aspect-square bg-[#FDFBF7] border border-siennaDark/5 mb-3"></div>
+          <span class="text-xs font-bold text-siennaDark">Background</span>
+          <span class="text-[10px] text-siennaLight mt-1">#FDFBF7 (Cream)</span>
+        </div>
+        <!-- Color 2 -->
+        <div class="flex flex-col bg-siennaBg border border-siennaDark/10 p-3 shadow-sm">
+          <div class="w-full aspect-square bg-[#A0522D] mb-3"></div>
+          <span class="text-xs font-bold text-siennaDark">Primary Accent</span>
+          <span class="text-[10px] text-siennaLight mt-1">#A0522D (Sienna)</span>
+        </div>
+        <!-- Color 3 -->
+        <div class="flex flex-col bg-siennaBg border border-siennaDark/10 p-3 shadow-sm">
+          <div class="w-full aspect-square bg-[#6B8E23] mb-3"></div>
+          <span class="text-xs font-bold text-siennaDark">Secondary Accent</span>
+          <span class="text-[10px] text-siennaLight mt-1">#6B8E23 (Olive)</span>
+        </div>
+        <!-- Color 4 -->
+        <div class="flex flex-col bg-siennaBg border border-siennaDark/10 p-3 shadow-sm">
+          <div class="w-full aspect-square bg-[#E2725B] mb-3"></div>
+          <span class="text-xs font-bold text-siennaDark">Tertiary Accent</span>
+          <span class="text-[10px] text-siennaLight mt-1">#E2725B (Terracotta)</span>
+        </div>
+        <!-- Color 5 -->
+        <div class="flex flex-col bg-siennaBg border border-siennaDark/10 p-3 shadow-sm">
+          <div class="w-full aspect-square bg-[#3E3B39] mb-3"></div>
+          <span class="text-xs font-bold text-siennaDark">Text Dark</span>
+          <span class="text-[10px] text-siennaLight mt-1">#3E3B39 (Near Black)</span>
+        </div>
+        <!-- Color 6 -->
+        <div class="flex flex-col bg-siennaBg border border-siennaDark/10 p-3 shadow-sm">
+          <div class="w-full aspect-square bg-[#5C5854] mb-3"></div>
+          <span class="text-xs font-bold text-siennaDark">Text Light</span>
+          <span class="text-[10px] text-siennaLight mt-1">#5C5854 (Gray)</span>
+        </div>
+        <!-- Color 7 -->
+        <div class="flex flex-col bg-siennaBg border border-siennaDark/10 p-3 shadow-sm">
+          <div class="w-full aspect-square bg-[#F5F2ED] mb-3"></div>
+          <span class="text-xs font-bold text-siennaDark">Highlight Swatch</span>
+          <span class="text-[10px] text-siennaLight mt-1">#F5F2ED (Light Cream)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: TYPOGRAPHY -->
+    <section class="docs-section">
+      <h2 class="font-serif text-3xl text-siennaDark mb-4">02. Typographical Hierarchy</h2>
+      <p class="text-siennaLight font-light text-sm leading-relaxed mb-8 max-w-3xl">
+        We load the display serif <strong>Erode</strong> from Fontshare, handwritten curves of <strong>Dancing Script</strong> from Google Fonts, and core body shapes from <strong>Satoshi Light</strong>.
+      </p>
+
+      <div class="space-y-8 bg-siennaHighlight/30 p-8 border border-siennaDark/5">
+        <div>
+          <span class="text-[9px] uppercase tracking-widest text-siennaLight block mb-2 font-bold">Display Serif Headline (6xl - 8xl)</span>
+          <h1 class="font-serif text-5xl md:text-7xl text-siennaDark leading-none">Capturing Nature's Quietude</h1>
+        </div>
+
+        <div>
+          <span class="text-[9px] uppercase tracking-widest text-siennaLight block mb-2 font-bold">Handwritten Accent Script (Dancing Script 400)</span>
+          <span class="font-handwritten text-4xl text-siennaPrimary">earth & soul fine art studio</span>
+        </div>
+
+        <div>
+          <span class="text-[9px] uppercase tracking-widest text-siennaLight block mb-2 font-bold">Body Paragraph (Satoshi Light 15px)</span>
+          <p class="text-siennaLight font-sans font-light text-base max-w-2xl leading-relaxed">
+            Our fine-art photographic emulsions and mixed-media collages are hand-finished with Carmel Valley beeswax glazes. Every piece reflects natural silhouettes, bringing quiet sanctuaries directly into high-end structural interiors.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: BUTTONS & HOVERS -->
+    <section class="docs-section">
+      <h2 class="font-serif text-3xl text-siennaDark mb-4">03. Interactive Buttons</h2>
+      <p class="text-siennaLight font-light text-sm leading-relaxed mb-8">
+        Interactive triggers use standard and transparent states accompanied by premium underlines and micro-hover floats.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-6 p-8 bg-siennaHighlight/20 border border-siennaDark/5">
+        <!-- Button 1 -->
+        <div class="flex flex-col items-center">
+          <span class="text-[9px] uppercase tracking-widest text-siennaLight mb-3 font-semibold">Solid CTA Accent</span>
+          <button class="px-8 py-3.5 bg-siennaPrimary text-siennaBg hover:bg-siennaTertiary text-xs font-bold uppercase tracking-widest transition-colors flex items-center shadow-md">
+            Explore Gallery
+            <iconify-icon icon="ph:arrow-right-thin" class="ml-2 text-base"></iconify-icon>
+          </button>
+        </div>
+
+        <!-- Button 2 -->
+        <div class="flex flex-col items-center">
+          <span class="text-[9px] uppercase tracking-widest text-siennaLight mb-3 font-semibold">Outlined Accent</span>
+          <button class="px-8 py-3.5 border border-siennaPrimary text-siennaPrimary hover:bg-siennaPrimary hover:text-siennaBg text-xs font-bold uppercase tracking-widest transition-colors">
+            Book Commission
+          </button>
+        </div>
+
+        <!-- Button 3 -->
+        <div class="flex flex-col items-center">
+          <span class="text-[9px] uppercase tracking-widest text-siennaLight mb-3 font-semibold">Underlined Link</span>
+          <a href="#" class="nav-link text-siennaDark hover:text-siennaPrimary text-xs font-bold uppercase tracking-widest active">
+            Active Navigation
+          </a>
+        </div>
+
+        <!-- Button 4 -->
+        <div class="flex flex-col items-center">
+          <span class="text-[9px] uppercase tracking-widest text-siennaLight mb-3 font-semibold">Floating Hover card</span>
+          <div class="px-6 py-4 bg-siennaBg border border-siennaDark/10 hover-float cursor-pointer shadow-sm text-xs font-semibold uppercase tracking-wider">
+            Hover Float specimen
+          </div>
+        </div>
+      </div>
+      
+      <div class="code-box">
+&lt;!-- Premium Solid Accent --&gt;
+&lt;button class="px-8 py-3.5 bg-siennaPrimary text-siennaBg hover:bg-siennaTertiary text-xs font-bold uppercase tracking-widest transition-colors"&gt;
+  Solid Button
+&lt;/button&gt;
+
+&lt;!-- Outlined Link --&gt;
+&lt;button class="px-8 py-3.5 border border-siennaPrimary text-siennaPrimary hover:bg-siennaPrimary hover:text-siennaBg text-xs font-bold uppercase tracking-widest transition-colors"&gt;
+  Outlined Button
+&lt;/button&gt;
+      </div>
+    </section>
+
+    <!-- SECTION 4: ORGANIC SHAPES -->
+    <section class="docs-section">
+      <h2 class="font-serif text-3xl text-siennaDark mb-4">04. Organic Shapes & Blobs</h2>
+      <p class="text-siennaLight font-light text-sm leading-relaxed mb-8 max-w-3xl">
+        A primary design element of Sienna Muse is the organic morphing shape. We configure asymmetrical border-radiuses and keyframe animations that morph fluidly over a 25-second cycle.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <!-- Static Specimen -->
+        <div class="flex flex-col items-center p-8 bg-siennaHighlight/30 border border-siennaDark/5">
+          <span class="text-[9px] uppercase tracking-widest text-siennaLight mb-4 font-bold">Organic Image Frame Class (rounded-organic)</span>
+          <div class="w-60 aspect-[4/5] rounded-organic bg-siennaPrimary/15 border border-siennaPrimary/10 overflow-hidden shadow-2xl flex justify-center items-center">
+            <iconify-icon icon="ph:image-square-thin" class="text-4xl text-siennaPrimary/40"></iconify-icon>
+          </div>
+        </div>
+
+        <!-- Morphing Specimen -->
+        <div class="flex flex-col items-center p-8 bg-siennaHighlight/30 border border-siennaDark/5">
+          <span class="text-[9px] uppercase tracking-widest text-siennaLight mb-4 font-bold">Morphing Background Blob Specimen (blob-morph)</span>
+          <div class="w-60 aspect-square rounded-organic bg-siennaSecondary/10 filter blur-md blob-morph border border-siennaSecondary/10 flex justify-center items-center">
+            <span class="text-xs uppercase font-bold tracking-widest text-siennaSecondary select-none">Slowly Morphing</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="code-box">
+/* Custom CSS tokens inside index.css */
+.rounded-organic {
+  border-radius: 63% 37% 54% 46% / 45% 48% 52% 55%;
+}
+
+.blob-morph {
+  animation: morph 25s ease-in-out infinite alternate;
+}
+      </div>
+    </section>
+
+    <!-- SECTION 5: FORMS & INTERACTIVES -->
+    <section class="docs-section">
+      <h2 class="font-serif text-3xl text-siennaDark mb-4">05. Form Fields & Slider Accordions</h2>
+      <p class="text-siennaLight font-light text-sm leading-relaxed mb-8">
+        Specimens of input styles, selection menus, dynamic range sliders, and active FAQ collapsible accordion cards.
+      </p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 p-8 bg-siennaHighlight/20 border border-siennaDark/5">
+        <!-- Input fields specimens -->
+        <div class="space-y-6">
+          <h3 class="text-[10px] uppercase font-bold tracking-widest text-siennaDark border-b border-siennaDark/15 pb-2">Fields & Slider</h3>
+          
+          <div class="flex flex-col">
+            <label class="text-[9px] uppercase font-semibold text-siennaLight mb-1.5">E-Mail Address Field</label>
+            <input type="email" required placeholder="E.g., contact@studio.com" class="px-4 py-3 border border-siennaDark/15 focus:outline-none focus:border-siennaPrimary text-sm font-sans bg-siennaBg text-siennaDark rounded-none">
+          </div>
+
+          <div class="flex flex-col">
+            <label class="text-[9px] uppercase font-semibold text-siennaLight mb-1.5">Budget Range Selection</label>
+            <div class="flex justify-between items-center text-xs font-semibold text-siennaPrimary mb-1.5">
+              <span>Dynamic Indicator</span>
+              <span>$4,500</span>
+            </div>
+            <input type="range" min="250" max="10000" step="250" value="4500" class="w-full accent-siennaPrimary cursor-pointer h-1 bg-siennaDark/10 rounded-lg">
+          </div>
+        </div>
+
+        <!-- FAQ accordion specimen -->
+        <div class="space-y-6">
+          <h3 class="text-[10px] uppercase font-bold tracking-widest text-siennaDark border-b border-siennaDark/15 pb-2">Collapsible FAQ Specimens</h3>
+          
+          <div class="border border-siennaDark/10 bg-siennaBg shadow-sm">
+            <button class="w-full px-5 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleSpecimenAccordion(this)">
+              <span class="font-serif text-sm text-siennaDark font-medium">How are limited edition prints packaged?</span>
+              <iconify-icon icon="ph:plus-light" class="text-lg text-siennaPrimary transition-transform duration-300"></iconify-icon>
+            </button>
+            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5" id="specimen-acc-body">
+              <p class="text-siennaLight font-light text-xs leading-relaxed pb-4">
+                Every print sheet is placed inside acid-free glassine wrapping, sandwiched securely within dual heavy-duty protective cardboard sheets, and shipped in bespoke, temperature-controlled flat crates to protect corners.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: INSTRUCTIONS FOR UPDATE -->
+    <section class="docs-section border-b-0">
+      <h2 class="font-serif text-3xl text-siennaDark mb-4">06. Maintenance & Expansion Guide</h2>
+      <p class="text-siennaLight font-light text-sm leading-relaxed mb-6">
+        The Sienna Muse application has been built utilizing vanilla modern technologies to guarantee incredibly fast page loading and clean file organization. Follow the guidelines below to update site items.
+      </p>
+
+      <div class="bg-siennaHighlight p-8 space-y-6">
+        <!-- Guide 1 -->
+        <div>
+          <h4 class="font-serif text-lg text-siennaDark font-medium mb-2">How to add a new Artwork piece</h4>
+          <p class="text-siennaLight font-light text-xs leading-relaxed max-w-3xl">
+            Open the <a href="app.js" class="text-siennaPrimary font-semibold hover:underline">app.js</a> file and locate the <strong>ARTWORKS</strong> array constant. Create a new object entry containing unique properties: <code>id</code>, <code>title</code>, <code>category</code> (Botanical, Ethereal, Still Life, Commissions), <code>medium</code>, <code>year</code>, <code>dimensions</code>, <code>price</code>, <code>status</code> (Available, Sold, Commissioned), <code>image</code> (relative assets directory path), <code>popularity</code> (0-100 rating for sorting), <code>description</code>, and <code>notes</code>. The extended portfolio grid dynamically builds and links detailed specs on the fly!
+          </p>
+        </div>
+        <!-- Guide 2 -->
+        <div>
+          <h4 class="font-serif text-lg text-siennaDark font-medium mb-2">Modifying style tokens and palette shifts</h4>
+          <p class="text-siennaLight font-light text-xs leading-relaxed max-w-3xl">
+            Core theme variables (primary rusts, olive shades, and fonts) are set inside the Tailwind CSS configuration block in the head of <a href="index.html" class="text-siennaPrimary font-semibold hover:underline">index.html</a>. Modifying color hex codes inside the <code>theme.extend.colors</code> block will update styling variables globally across all inline class representations automatically.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-siennaHighlight border-t border-siennaDark/15 py-12 px-8 text-center text-xs text-siennaLight">
+    <span class="tracking-widest uppercase font-semibold">© 2026 SIENNA MUSE STUDIO. ALL COMPONENT SPECS DESIGNED IN HOUSE.</span>
+  </footer>
+
+  <script>
+    // Local script for accordion demo in style guide
+    function toggleSpecimenAccordion(btn) {
+      const content = document.getElementById('specimen-acc-body');
+      const icon = btn.querySelector('iconify-icon');
+      
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        icon.setAttribute('icon', 'ph:plus-light');
+        icon.style.transform = "";
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.setAttribute('icon', 'ph:minus-light');
+        icon.style.transform = "rotate(180deg)";
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sienna Muse — High-End Fine Art Photography & Mixed-Media Showcase</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Immersive fine art portfolio of Sienna Muse. High-end photography and mixed-media showcase capturing the quietude of nature with an organic minimalist aesthetic.">
+  <meta name="keywords" content="fine art photography, mixed-media artist, sienna muse, botanical photography, bohemian luxury, art collectors, portfolio">
+  <meta property="og:title" content="Sienna Muse — High-End Fine Art Photography Showcase">
+  <meta property="og:description" content="Organic minimalist photography and mixed-media art capturing the quietude of nature.">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon (Fallback) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23A0522D' d='M17 8C8 8 4 16 4 20h2c0-2.3 1.2-4.5 3-5.7V20h2v-7.2c.6-.1 1.3-.2 2-.2c3.3 0 6 2.7 6 6h2c0-5.5-4.5-10-10-10c-.7 0-1.3.1-2 .2V8.3c1.8-1.2 3-3.4 3-5.7H15c0 4 3 4 2 5.4M10 8.3V11c-.7.1-1.3.2-2 .4c-1.8 1.2-3 3.4-3 5.7h2c0-3.3 2.7-6 6-6c.7 0 1.3.1 2 .2V8.3'/%3E%3C/svg%3E">
+
+  <!-- Fonts Loading -->
+  <!-- Fontshare for Satoshi (sans-serif) & Erode (serif) -->
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&f[]=erode@300,400,500,600,700&display=swap" rel="stylesheet">
+  <!-- Google Fonts for Dancing Script (handwritten/script) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+  <!-- Iconify Library -->
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+  <!-- Tailwind PlayCDN with Custom Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            siennaBg: '#FDFBF7',
+            siennaPrimary: '#A0522D',
+            siennaSecondary: '#6B8E23',
+            siennaTertiary: '#E2725B',
+            siennaDark: '#3E3B39',
+            siennaLight: '#5C5854',
+            siennaHighlight: '#F5F2ED',
+          },
+          fontFamily: {
+            serif: ['Erode', 'Georgia', 'serif'],
+            handwritten: ['Dancing Script', 'cursive'],
+            sans: ['Satoshi', 'sans-serif'],
+          },
+          borderRadius: {
+            'organic': '63% 37% 54% 46% / 45% 48% 52% 55%',
+          },
+          transitionTimingFunction: {
+            'reveal-ease': 'cubic-bezier(0.22, 1, 0.36, 1)',
+            'float-ease': 'cubic-bezier(0.34, 1.56, 0.64, 1)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Link custom CSS stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body class="bg-siennaBg text-siennaDark overflow-x-hidden selection:bg-siennaPrimary/20 relative">
+
+  <!-- Custom Cursor Follower (Desktop only) -->
+  <div id="custom-cursor" class="hidden lg:block"></div>
+  <div id="custom-cursor-ring" class="hidden lg:block"></div>
+
+  <!-- Ambient Blurred Organic Blobs -->
+  <div class="absolute top-[20vh] -left-[10vw] w-[45vw] h-[45vw] bg-siennaPrimary/5 rounded-full filter blur-[100px] pointer-events-none blob-morph z-0"></div>
+  <div class="absolute top-[80vh] -right-[15vw] w-[50vw] h-[50vw] bg-siennaSecondary/5 rounded-full filter blur-[120px] pointer-events-none blob-morph z-0" style="animation-delay: -5s;"></div>
+  <div class="absolute top-[250vh] -left-[15vw] w-[50vw] h-[50vw] bg-siennaTertiary/3 rounded-full filter blur-[110px] pointer-events-none blob-morph z-0" style="animation-delay: -10s;"></div>
+
+  <!-- STICKY HEADER / FIXED NAVIGATION -->
+  <header id="main-header" class="fixed top-0 left-0 w-full z-50 bg-siennaBg/85 backdrop-blur-md border-b border-siennaDark/5 transition-all duration-500 py-6 md:px-16 px-8 flex justify-between items-center">
+    <!-- Logo with Italicized Subtitle -->
+    <a href="#home" class="flex flex-col select-none group z-50">
+      <span class="font-serif text-2xl tracking-wide font-medium text-siennaDark transition-colors duration-300 group-hover:text-siennaPrimary">
+        Sienna <em class="font-light not-italic text-siennaLight">Muse</em>
+      </span>
+      <span class="font-handwritten text-sm text-siennaPrimary mt-0.5 tracking-widest pl-1">earth & soul art studio</span>
+    </a>
+
+    <!-- Desktop Menu Navigation -->
+    <nav class="hidden md:flex items-center space-x-8">
+      <a href="#portfolio" class="nav-link text-siennaDark/80 hover:text-siennaPrimary text-sm font-medium tracking-widest uppercase">Portfolio</a>
+      <a href="#exhibitions" class="nav-link text-siennaDark/80 hover:text-siennaPrimary text-sm font-medium tracking-widest uppercase">Exhibitions</a>
+      <a href="#journal" class="nav-link text-siennaDark/80 hover:text-siennaPrimary text-sm font-medium tracking-widest uppercase">Journal</a>
+      <a href="#about" class="nav-link text-siennaDark/80 hover:text-siennaPrimary text-sm font-medium tracking-widest uppercase">About</a>
+      <a href="#services" class="nav-link text-siennaDark/80 hover:text-siennaPrimary text-sm font-medium tracking-widest uppercase">Services</a>
+      <a href="#contact" class="nav-link text-siennaDark/80 hover:text-siennaPrimary text-sm font-medium tracking-widest uppercase">Contact</a>
+
+      <!-- Account dropdown (Option C) -->
+      <div class="relative" id="account-menu">
+        <button id="account-toggle" aria-expanded="false" aria-controls="account-dropdown" class="flex items-center space-x-2 text-sm font-medium tracking-widest uppercase text-siennaDark/80 hover:text-siennaPrimary focus:outline-none">
+          <span>Account</span>
+          <iconify-icon icon="ph:caret-down-light" class="text-xs text-siennaLight"></iconify-icon>
+        </button>
+        <div id="account-dropdown" class="absolute right-0 mt-3 w-56 bg-siennaBg border border-siennaDark/5 rounded-md shadow-lg opacity-0 pointer-events-none transition-opacity">
+          <a href="#client-portal" class="block px-4 py-3 text-sm text-siennaDark hover:bg-siennaHighlight">Client Portal</a>
+          <a href="#private/private-coastal-commission" class="block px-4 py-3 text-sm text-siennaDark hover:bg-siennaHighlight">Private Gallery</a>
+          <a href="#settings" class="block px-4 py-3 text-sm text-siennaDark hover:bg-siennaHighlight">Settings</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="hidden md:flex items-center space-x-6">
+      <button onclick="toggleInquiryDrawer(true)" class="px-6 py-2 rounded-full border border-siennaDark/30 text-siennaDark hover:bg-siennaPrimary hover:text-siennaBg hover:border-siennaPrimary text-[11px] font-semibold uppercase tracking-widest transition-all duration-300">
+        Inquire
+      </button>
+    </div>
+
+    <!-- Mobile Hamburger Toggle -->
+    <button id="mobile-menu-toggle" class="md:hidden flex flex-col justify-between w-6 h-4 z-50 focus:outline-none" aria-label="Toggle Mobile Menu">
+      <span class="w-full h-0.5 bg-siennaDark transition-all duration-300 origin-left"></span>
+      <span class="w-full h-0.5 bg-siennaDark transition-all duration-300"></span>
+      <span class="w-full h-0.5 bg-siennaDark transition-all duration-300 origin-left"></span>
+    </button>
+  </header>
+
+  <!-- MOBILE OVERLAY NAVIGATION -->
+  <div id="mobile-menu" class="fixed inset-0 bg-siennaBg z-40 flex flex-col justify-center items-center opacity-0 pointer-events-none transition-all duration-500 py-12 px-8">
+    <!-- Embedded plant background overlay -->
+    <div class="absolute inset-0 bg-plant-overlay pointer-events-none opacity-[0.03]"></div>
+    
+    <nav class="flex flex-col space-y-6 text-center z-10">
+      <a href="#portfolio" class="font-serif text-3xl text-siennaDark hover:text-siennaPrimary transition-colors duration-300 tracking-wider">Portfolio</a>
+      <a href="#exhibitions" class="font-serif text-3xl text-siennaDark hover:text-siennaPrimary transition-colors duration-300 tracking-wider">Exhibitions</a>
+      <a href="#journal" class="font-serif text-3xl text-siennaDark hover:text-siennaPrimary transition-colors duration-300 tracking-wider">Journal</a>
+      <a href="#about" class="font-serif text-3xl text-siennaDark hover:text-siennaPrimary transition-colors duration-300 tracking-wider">About</a>
+      <a href="#services" class="font-serif text-3xl text-siennaDark hover:text-siennaPrimary transition-colors duration-300 tracking-wider">Services</a>
+      <a href="#contact" class="font-serif text-3xl text-siennaDark hover:text-siennaPrimary transition-colors duration-300 tracking-wider">Contact</a>
+
+      <!-- Mobile Account Links -->
+      <a href="#client-portal" class="font-serif text-3xl text-siennaDark hover:text-siennaPrimary transition-colors duration-300 tracking-wider">Client Portal</a>
+      <a href="#private/private-coastal-commission" class="font-serif text-3xl text-siennaDark hover:text-siennaPrimary transition-colors duration-300 tracking-wider">Private Gallery</a>
+      <a href="#settings" class="font-serif text-3xl text-siennaDark hover:text-siennaPrimary transition-colors duration-300 tracking-wider">Settings</a>
+    </nav>
+    <div class="mt-12 z-10">
+      <button onclick="toggleInquiryDrawer(true); toggleMobileMenu(false);" class="px-8 py-3.5 border border-siennaPrimary text-siennaPrimary hover:bg-siennaPrimary hover:text-siennaBg text-sm font-semibold uppercase tracking-widest transition-all duration-300">
+        Send Inquiry
+      </button>
+    </div>
+    
+    <div class="absolute bottom-12 flex space-x-6 text-siennaLight">
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><iconify-icon icon="ph:instagram-logo-light" class="text-xl hover:text-siennaPrimary"></iconify-icon></a>
+      <a href="https://pinterest.com" target="_blank" aria-label="Pinterest"><iconify-icon icon="ph:pinterest-logo-light" class="text-xl hover:text-siennaPrimary"></iconify-icon></a>
+      <a href="https://behance.net" target="_blank" aria-label="Behance"><iconify-icon icon="ph:behance-logo-light" class="text-xl hover:text-siennaPrimary"></iconify-icon></a>
+    </div>
+  </div>
+
+  <!-- MAIN APP PORT CONTAINER -->
+  <main id="app-container" class="relative pt-24 min-h-[80vh] w-full overflow-hidden">
+
+    <!-- ========================================================================= -->
+    <!-- 1. HOMEPAGE VIEW (ID: home-view) -->
+    <!-- ========================================================================= -->
+    <section id="home-view" class="view-pane active w-full">
+
+      <!-- ============================================================= -->
+      <!-- HERO SECTION — Two column layout matching screenshot exactly  -->
+      <!-- ============================================================= -->
+      <div class="min-h-screen md:px-16 px-8 flex flex-col md:flex-row items-center justify-between relative z-10 pt-16 pb-20 gap-8 md:gap-0">
+
+        <!-- HERO LEFT COLUMN -->
+        <div class="w-full md:w-[52%] flex flex-col pr-0 md:pr-8 reveal">
+          <!-- Handwritten tagline -->
+          <span class="font-handwritten text-3xl md:text-4xl text-siennaPrimary tracking-wide mb-4 animate-soft-float inline-block">Earth &amp; Soul</span>
+
+          <!-- Main serif headline -->
+          <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl text-siennaDark leading-[1.08] tracking-tight mb-6">
+            Capturing the <br><span class="italic">Quietude</span> of nature.
+          </h1>
+
+          <!-- Subtitle paragraph -->
+          <p class="text-siennaLight font-sans font-light text-[15px] md:text-base max-w-md leading-relaxed mb-10">
+            A breathtaking collection of fine art photography and mixed-media studies — rooted in silence, rustic stillness, and the raw poetry of organic forms.
+          </p>
+
+          <!-- CTA Row -->
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-10">
+            <!-- Capsule explore button -->
+            <a href="#portfolio" id="hero-explore-btn" class="group flex items-center gap-2 rounded-full border border-siennaDark/25 px-7 py-3 text-[11px] font-semibold uppercase tracking-widest text-siennaDark hover:bg-siennaPrimary hover:text-siennaBg hover:border-siennaPrimary transition-all duration-300">
+              Explore Gallery
+              <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </a>
+          </div>
+
+          <!-- Overlapping Collector Avatars Row -->
+          <div class="flex items-center gap-4">
+            <!-- Stacked avatar circles -->
+            <div class="flex -space-x-3">
+              <div class="w-9 h-9 rounded-full border-2 border-siennaBg bg-siennaPrimary/20 overflow-hidden shadow-sm">
+                <img src="https://i.pravatar.cc/40?img=5" alt="Collector" class="w-full h-full object-cover">
+              </div>
+              <div class="w-9 h-9 rounded-full border-2 border-siennaBg bg-siennaSecondary/20 overflow-hidden shadow-sm">
+                <img src="https://i.pravatar.cc/40?img=12" alt="Collector" class="w-full h-full object-cover">
+              </div>
+              <div class="w-9 h-9 rounded-full border-2 border-siennaBg bg-siennaTertiary/20 overflow-hidden shadow-sm">
+                <img src="https://i.pravatar.cc/40?img=22" alt="Collector" class="w-full h-full object-cover">
+              </div>
+              <div class="w-9 h-9 rounded-full border-2 border-siennaBg bg-siennaDark/20 overflow-hidden shadow-sm">
+                <img src="https://i.pravatar.cc/40?img=33" alt="Collector" class="w-full h-full object-cover">
+              </div>
+              <!-- +12k badge circle -->
+              <div class="w-9 h-9 rounded-full border-2 border-siennaBg bg-siennaDark flex items-center justify-center shadow-sm">
+                <span class="text-siennaBg text-[8px] font-bold leading-none">+12k</span>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-siennaDark font-semibold text-xs tracking-wide">12,000+ Collectors</span>
+              <span class="text-siennaLight text-[10px] font-light">Globally trusted fine-art studio</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- HERO RIGHT COLUMN — Sage green card with custom corner rounding -->
+        <div class="w-full md:w-[45%] flex justify-end relative reveal delay-200">
+          <!-- Sage card with organic left-side pill rounding -->
+          <div class="relative w-full max-w-[480px] aspect-[3/4] rounded-tl-[7rem] rounded-bl-[7rem] rounded-tr-[2rem] rounded-br-[2rem] overflow-hidden shadow-2xl bg-[#7a9168]">
+            <img src="assets/hero_lamp.png" alt="Minimalist wall lamp on sage plaster wall" class="w-full h-full object-cover">
+          </div>
+
+          <!-- ETHICALLY SOURCED circular seal badge (half-off bottom-left of card) -->
+          <div class="absolute -bottom-10 left-0 md:-left-6 w-28 h-28 bg-white rounded-full shadow-2xl z-30 flex flex-col items-center justify-center border border-siennaDark/5 animate-soft-float">
+            <!-- Leaf icon -->
+            <svg class="w-6 h-6 text-siennaSecondary mb-1" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke="#6B8E23" d="M12 3c0 0-7 4-7 10a7 7 0 0014 0c0-6-7-10-7-10z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke="#6B8E23" d="M12 3v18"/>
+            </svg>
+            <span class="text-[8px] font-bold tracking-widest uppercase text-siennaDark text-center leading-tight px-2">Ethically<br>Sourced</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================= -->
+      <!-- SELECTED ARCHIVES SECTION — matching screenshot layout        -->
+      <!-- ============================================================= -->
+      <div class="py-24 md:px-16 px-8 bg-siennaHighlight/30 border-t border-siennaDark/5 relative mt-12">
+        <div class="max-w-7xl mx-auto">
+
+          <!-- Title row + right-side filters -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 reveal">
+            <div>
+              <h2 class="font-serif text-4xl md:text-5xl text-siennaDark mb-3">Selected Archives</h2>
+              <p class="text-siennaLight font-sans font-light text-sm md:text-base italic max-w-sm leading-relaxed">
+                A curated glimpse into our permanent and ongoing mixed-media art records.
+              </p>
+            </div>
+
+            <!-- Category filters (uppercase, right aligned) -->
+            <div class="flex flex-wrap gap-2 mt-8 md:mt-0" id="homepage-filters">
+              <button onclick="navigateToPortfolio('All')" class="px-5 py-2 text-[11px] font-semibold uppercase tracking-widest border-b-2 border-siennaPrimary text-siennaPrimary bg-transparent transition-all">All</button>
+              <button onclick="navigateToPortfolio('Botanical')" class="px-5 py-2 text-[11px] font-semibold uppercase tracking-widest border-b-2 border-transparent text-siennaLight hover:text-siennaPrimary hover:border-siennaPrimary transition-all">Botanical</button>
+              <button onclick="navigateToPortfolio('Ethereal')" class="px-5 py-2 text-[11px] font-semibold uppercase tracking-widest border-b-2 border-transparent text-siennaLight hover:text-siennaPrimary hover:border-siennaPrimary transition-all">Ethereal</button>
+              <button onclick="navigateToPortfolio('Still Life')" class="px-5 py-2 text-[11px] font-semibold uppercase tracking-widest border-b-2 border-transparent text-siennaLight hover:text-siennaPrimary hover:border-siennaPrimary transition-all">Still Life</button>
+            </div>
+          </div>
+
+          <!-- 2-Column Asymmetric Archive Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 stagger-items" id="home-gallery-grid">
+            <!-- JS populated with rounded-[2.5rem] cards -->
+          </div>
+
+          <!-- View all CTA -->
+          <div class="mt-14 text-center reveal">
+            <a href="#portfolio" class="inline-flex items-center space-x-2 text-xs font-semibold uppercase tracking-widest text-siennaDark hover:text-siennaPrimary transition-colors group">
+              <span>View Entire Portfolio</span>
+              <iconify-icon icon="ph:arrow-right-thin" class="text-base transition-transform duration-300 group-hover:translate-x-1.5"></iconify-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================= -->
+      <!-- THE STORY SECTION — Elena Rossi biography                     -->
+      <!-- ============================================================= -->
+      <div class="py-28 md:px-16 px-8 bg-siennaHighlight relative overflow-hidden">
+        <!-- Subtle leaf decoration -->
+        <div class="absolute right-[5vw] top-1/2 -translate-y-1/2 w-[30vw] h-[30vw] bg-plant-overlay z-0 opacity-[0.04]"></div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
+
+          <!-- LEFT COLUMN — Story text -->
+          <div class="lg:col-span-7 flex flex-col reveal">
+            <!-- Muted sub-label -->
+            <span class="text-[10px] uppercase tracking-[0.35em] text-siennaLight font-bold mb-4">The Story</span>
+
+            <!-- Main headline -->
+            <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl text-siennaDark leading-tight mb-8">
+              Where the <br><span class="italic">Wild</span> things grow.
+            </h2>
+
+            <!-- Two paragraphs about Elena Rossi -->
+            <p class="text-siennaLight font-sans font-light text-[15px] leading-relaxed mb-5 max-w-xl">
+              Elena Rossi is the creative force behind Sienna Muse — a fine art photography and mixed-media studio rooted in the wild hills of Tuscany and the coastal bluffs of Carmel-by-the-Sea. Her practice is a slow meditation: analog cameras, dried botanical fragments, and hand-ground clay pigments layered onto heavy mulberry paper.
+            </p>
+            <p class="text-siennaLight font-sans font-light text-[15px] leading-relaxed mb-12 max-w-xl">
+              Every piece is an invitation to breathe deeper — to linger in the rustle of oak leaves, the weight of morning fog, and the quiet authority of untouched nature. Elena's work resides in private collections from Zurich to São Paulo, and in luxury residential spaces seeking art with genuine earth and soul.
+            </p>
+
+            <!-- Stats row -->
+            <div class="grid grid-cols-3 gap-8 pt-8 border-t border-siennaDark/10">
+              <div class="flex flex-col">
+                <span class="font-serif text-3xl md:text-4xl text-siennaPrimary font-semibold leading-none">12</span>
+                <span class="text-[10px] uppercase tracking-widest text-siennaLight font-bold mt-2">Exhibitions</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-serif text-3xl md:text-4xl text-siennaPrimary font-semibold leading-none">09</span>
+                <span class="text-[10px] uppercase tracking-widest text-siennaLight font-bold mt-2">Publications</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-serif text-3xl md:text-4xl text-siennaPrimary font-semibold leading-none">45+</span>
+                <span class="text-[10px] uppercase tracking-widest text-siennaLight font-bold mt-2">Collectors</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN — Circular portrait + floating rotated badge -->
+          <div class="lg:col-span-5 flex justify-center items-center relative reveal delay-200">
+            <!-- Large foliage / leaf outline background decoration -->
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.07]">
+              <svg viewBox="0 0 200 200" class="w-full max-w-[400px]" fill="none">
+                <ellipse cx="100" cy="100" rx="85" ry="95" stroke="#6B8E23" stroke-width="1.5"/>
+                <ellipse cx="100" cy="100" rx="60" ry="70" stroke="#6B8E23" stroke-width="1"/>
+                <line x1="100" y1="5" x2="100" y2="195" stroke="#6B8E23" stroke-width="1"/>
+                <path d="M30 100 Q65 60 100 100 Q135 140 170 100" stroke="#6B8E23" stroke-width="1" fill="none"/>
+                <path d="M30 100 Q65 140 100 100 Q135 60 170 100" stroke="#6B8E23" stroke-width="0.8" fill="none"/>
+              </svg>
+            </div>
+
+            <!-- Circular framed portrait of Elena Rossi -->
+            <div class="relative w-[280px] h-[280px] md:w-[340px] md:h-[340px]">
+              <div class="w-full h-full rounded-full border-[10px] border-white shadow-2xl overflow-hidden bg-siennaHighlight">
+                <img src="assets/artist_portrait_hat.png" alt="Elena Rossi — Fine Art Photographer" class="w-full h-full object-cover object-top">
+              </div>
+
+              <!-- Rotated sienna badge — 'Nature is my canvas' -->
+              <div class="absolute -bottom-4 -right-8 bg-siennaTertiary text-siennaBg px-5 py-3 shadow-xl transform rotate-[-12deg] z-20 rounded-sm">
+                <span class="font-handwritten text-base leading-tight whitespace-nowrap">"Nature is my canvas"</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- INQUIRY / CONNECT SECTION -->
+      <div class="py-24 md:px-16 px-8 bg-siennaBg relative z-10 border-t border-siennaDark/5">
+        <div class="max-w-4xl mx-auto text-center reveal">
+          <span class="font-handwritten text-4xl text-siennaPrimary tracking-wide mb-3 block">Connect</span>
+          <h2 class="font-serif text-4xl md:text-6xl text-siennaDark leading-tight mb-4">Would you like to work together?</h2>
+          <p class="text-siennaLight font-sans font-light text-base md:text-lg max-w-xl mx-auto leading-relaxed mb-10">
+            Let us build something beautiful. Elena is currently accepting custom fine-art commissions, studio consulting, and gallery collaborations.
+          </p>
+
+          <!-- Standard Fast Email Form -->
+          <form id="fast-inquiry-form" class="flex flex-col sm:flex-row items-center justify-center max-w-md mx-auto gap-3">
+            <input type="email" required placeholder="Your email address" aria-label="Email" class="w-full px-5 py-4 border border-siennaDark/15 focus:outline-none focus:border-siennaPrimary text-sm font-sans bg-siennaHighlight/30 text-siennaDark tracking-wide rounded-none transition-colors">
+            <button type="submit" class="w-full sm:w-auto shrink-0 px-8 py-4 bg-siennaPrimary hover:bg-siennaTertiary text-siennaBg text-xs font-bold uppercase tracking-widest transition-colors">
+              Send Inquiry
+            </button>
+          </form>
+          
+          <div class="mt-12 flex justify-center space-x-8 text-siennaLight text-2xl">
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="hover:text-siennaPrimary transition-colors"><iconify-icon icon="ph:instagram-logo-thin"></iconify-icon></a>
+            <a href="https://pinterest.com" target="_blank" aria-label="Pinterest" class="hover:text-siennaPrimary transition-colors"><iconify-icon icon="ph:pinterest-logo-thin"></iconify-icon></a>
+            <a href="https://behance.net" target="_blank" aria-label="Behance" class="hover:text-siennaPrimary transition-colors"><iconify-icon icon="ph:behance-logo-thin"></iconify-icon></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 2. PORTFOLIO GRID PAGE VIEW (ID: portfolio-view) -->
+    <!-- ========================================================================= -->
+    <section id="portfolio-view" class="view-pane w-full py-16 md:px-16 px-8">
+      <div class="max-w-7xl mx-auto">
+        <!-- Title bar -->
+        <div class="text-center mb-16 reveal">
+          <span class="font-handwritten text-4xl text-siennaPrimary block mb-2">Exhibition Gallery</span>
+          <h1 class="font-serif text-5xl md:text-6xl text-siennaDark leading-tight">Extended Fine Art Portfolio</h1>
+          <p class="text-siennaLight font-light max-w-xl mx-auto mt-4 leading-relaxed text-sm md:text-base">
+            Filter through our curated artwork categories, archival prints, and exclusive mixed-media commissions below.
+          </p>
+        </div>
+
+        <!-- Filter, Search and Sorting Bar -->
+        <div class="bg-siennaHighlight/50 border border-siennaDark/5 p-6 mb-12 flex flex-col lg:flex-row lg:items-center justify-between gap-6 reveal">
+          <!-- Active filter buttons with sienna underlines -->
+          <div class="flex flex-wrap items-center gap-2" id="portfolio-active-filters">
+            <button onclick="filterPortfolio('All')" class="px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all border-b-2 border-siennaPrimary text-siennaPrimary" data-filter="All">All</button>
+            <button onclick="filterPortfolio('Botanical')" class="px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all border-b-2 border-transparent text-siennaLight hover:text-siennaPrimary" data-filter="Botanical">Botanical</button>
+            <button onclick="filterPortfolio('Ethereal')" class="px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all border-b-2 border-transparent text-siennaLight hover:text-siennaPrimary" data-filter="Ethereal">Ethereal</button>
+            <button onclick="filterPortfolio('Still Life')" class="px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all border-b-2 border-transparent text-siennaLight hover:text-siennaPrimary" data-filter="Still Life">Still Life</button>
+            <button onclick="filterPortfolio('Commissions')" class="px-5 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all border-b-2 border-transparent text-siennaLight hover:text-siennaPrimary" data-filter="Commissions">Commissions</button>
+          </div>
+
+          <!-- Dynamic Search & Sort options -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <!-- Search bar -->
+            <div class="relative">
+              <input type="text" id="portfolio-search-input" placeholder="Search artwork..." class="w-full sm:w-60 px-4 py-2 text-xs border border-siennaDark/15 focus:outline-none focus:border-siennaPrimary bg-siennaBg tracking-wider text-siennaDark rounded-none">
+              <iconify-icon icon="ph:magnifying-glass-light" class="absolute right-3 top-1/2 -translate-y-1/2 text-siennaLight"></iconify-icon>
+            </div>
+            
+            <!-- Sorting dropdown -->
+            <div class="flex items-center space-x-2">
+              <span class="text-[10px] uppercase tracking-widest text-siennaLight font-bold">Sort By</span>
+              <select id="portfolio-sort-select" onchange="sortPortfolio(this.value)" class="px-3 py-2 text-xs border border-siennaDark/15 focus:outline-none focus:border-siennaPrimary bg-siennaBg tracking-wider text-siennaDark rounded-none">
+                <option value="default">Default Selection</option>
+                <option value="title">Title (A-Z)</option>
+                <option value="year">Date Created</option>
+                <option value="popularity">Popularity</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Extended Gallery Masonry Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[40vh]" id="portfolio-gallery-grid">
+          <!-- Populated in app.js -->
+        </div>
+
+        <!-- No Results state -->
+        <div id="portfolio-no-results" class="hidden text-center py-20">
+          <iconify-icon icon="ph:image-square-thin" class="text-5xl text-siennaLight/30 mb-4 block"></iconify-icon>
+          <span class="font-serif text-xl text-siennaDark block">No matching artworks found</span>
+          <p class="text-siennaLight text-xs mt-2 max-w-xs mx-auto font-light">Try adjusting your filters or search keywords to explore the collection.</p>
+        </div>
+
+        <!-- Load More / Pagination -->
+        <div class="mt-16 text-center reveal" id="portfolio-load-more-container">
+          <button onclick="loadMoreArtworks()" class="px-8 py-3.5 border border-siennaDark text-siennaDark hover:bg-siennaPrimary hover:text-siennaBg hover:border-siennaPrimary text-xs font-semibold uppercase tracking-widest transition-all duration-300 shadow-sm">
+            Load More Artworks
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. ARTWORK DETAIL PAGE VIEW (ID: artwork-view) -->
+    <!-- ========================================================================= -->
+    <section id="artwork-view" class="view-pane w-full py-12 md:px-16 px-8">
+      <div class="max-w-7xl mx-auto">
+        <!-- Back Navigation -->
+        <div class="mb-10 reveal">
+          <a href="#portfolio" class="inline-flex items-center space-x-2 text-xs font-semibold uppercase tracking-widest text-siennaLight hover:text-siennaPrimary transition-colors group">
+            <iconify-icon icon="ph:arrow-left-thin" class="text-base transition-transform duration-300 group-hover:-translate-x-1"></iconify-icon>
+            <span>Back to Portfolio Grid</span>
+          </a>
+        </div>
+
+        <!-- Artwork Core Layout -->
+        <div id="artwork-detail-container" class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
+          <!-- Dynamic details injected by app.js -->
+        </div>
+
+        <!-- Related Works Slider / Carousel -->
+        <div class="border-t border-siennaDark/10 pt-20 reveal">
+          <div class="flex items-center justify-between mb-10">
+            <div>
+              <span class="font-handwritten text-3xl text-siennaPrimary block mb-1">Visual Harmonies</span>
+              <h2 class="font-serif text-3xl md:text-4xl text-siennaDark">Related Photographic Works</h2>
+            </div>
+            <!-- Slider navigation buttons -->
+            <div class="flex space-x-3">
+              <button onclick="slideCarousel('left')" aria-label="Previous slide" class="w-10 h-10 border border-siennaDark/15 flex justify-center items-center hover:bg-siennaPrimary hover:text-siennaBg hover:border-siennaPrimary transition-colors">
+                <iconify-icon icon="ph:arrow-left-thin"></iconify-icon>
+              </button>
+              <button onclick="slideCarousel('right')" aria-label="Next slide" class="w-10 h-10 border border-siennaDark/15 flex justify-center items-center hover:bg-siennaPrimary hover:text-siennaBg hover:border-siennaPrimary transition-colors">
+                <iconify-icon icon="ph:arrow-right-thin"></iconify-icon>
+              </button>
+            </div>
+          </div>
+
+          <!-- Carousel Container (Dragging Track) -->
+          <div class="overflow-hidden relative select-none w-full" id="related-works-carousel">
+            <div class="carousel-track flex space-x-6 w-full" id="carousel-inner-track">
+              <!-- Dynamically populated in app.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4. EXHIBITION ARCHIVE PAGE VIEW (ID: exhibitions-view) -->
+    <!-- ========================================================================= -->
+    <section id="exhibitions-view" class="view-pane w-full py-16 md:px-16 px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16 reveal">
+          <span class="font-handwritten text-4xl text-siennaPrimary block mb-2">Artistic Milestones</span>
+          <h1 class="font-serif text-5xl md:text-6xl text-siennaDark">Exhibitions Timeline</h1>
+          <p class="text-siennaLight font-light max-w-xl mx-auto mt-4 leading-relaxed text-sm md:text-base">
+            Chronology of public displays, past solo showcases, upcoming presentations, and virtual high-fidelity gallery exhibitions.
+          </p>
+        </div>
+
+        <!-- Exhibition filters -->
+        <div class="flex justify-center gap-2 mb-12" id="exhibition-filters-wrapper">
+          <button onclick="filterExhibitions('All')" class="px-5 py-2 text-xs font-semibold uppercase tracking-wider bg-siennaPrimary text-siennaBg border border-siennaPrimary shadow-md" data-ex-filter="All">All Events</button>
+          <button onclick="filterExhibitions('Upcoming')" class="px-5 py-2 text-xs font-semibold uppercase tracking-wider bg-siennaBg text-siennaLight hover:text-siennaPrimary border border-siennaDark/5 transition-all shadow-sm" data-ex-filter="Upcoming">Upcoming</button>
+          <button onclick="filterExhibitions('Past')" class="px-5 py-2 text-xs font-semibold uppercase tracking-wider bg-siennaBg text-siennaLight hover:text-siennaPrimary border border-siennaDark/5 transition-all shadow-sm" data-ex-filter="Past">Past Solo/Group</button>
+          <button onclick="filterExhibitions('Virtual')" class="px-5 py-2 text-xs font-semibold uppercase tracking-wider bg-siennaBg text-siennaLight hover:text-siennaPrimary border border-siennaDark/5 transition-all shadow-sm" data-ex-filter="Virtual">Virtual Gallery</button>
+        </div>
+
+        <!-- Exhibition Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20" id="exhibitions-events-grid">
+          <!-- Populated in app.js -->
+        </div>
+
+        <!-- Publication Showcase Section -->
+        <div class="border-t border-siennaDark/15 pt-20 text-center reveal">
+          <span class="font-handwritten text-3xl text-siennaPrimary block mb-4">Press & Print</span>
+          <h3 class="font-serif text-2xl text-siennaDark mb-10 font-medium uppercase tracking-widest text-[13px]">Featured Internationally in Leading Art Publications</h3>
+          
+          <div class="flex flex-wrap items-center justify-center gap-12 md:gap-20 opacity-55 hover:opacity-85 transition-opacity">
+            <span class="font-serif text-xl md:text-2xl text-siennaDark font-semibold tracking-widest italic select-none">VOGUE</span>
+            <span class="font-sans text-lg md:text-xl text-siennaDark font-bold tracking-[0.2em] uppercase select-none">Architectural Digest</span>
+            <span class="font-serif text-2xl md:text-3xl text-siennaDark tracking-normal select-none">K I N F O L K</span>
+            <span class="font-sans text-base md:text-lg text-siennaDark font-light tracking-[0.4em] uppercase select-none">Milk Decoration</span>
+            <span class="font-serif text-lg md:text-xl text-siennaDark font-semibold tracking-wide italic select-none">Cereal Mag</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. JOURNAL/BLOG PAGE VIEW (ID: journal-view) -->
+    <!-- ========================================================================= -->
+    <section id="journal-view" class="view-pane w-full py-16 md:px-16 px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16 reveal">
+          <span class="font-handwritten text-4xl text-siennaPrimary block mb-2">Insights & Essays</span>
+          <h1 class="font-serif text-5xl md:text-6xl text-siennaDark">The Studio Journal</h1>
+          <p class="text-siennaLight font-light max-w-xl mx-auto mt-4 leading-relaxed text-sm md:text-base">
+            Behind the lens, creative philosophies, darkroom thoughts, collecting guides, and thoughts on organic minimalist living.
+          </p>
+        </div>
+
+        <!-- Featured Blog Post Card (Large) -->
+        <div class="mb-16 reveal" id="journal-featured-post-container">
+          <!-- Injected in app.js -->
+        </div>
+
+        <!-- Post Category filters -->
+        <div class="border-b border-siennaDark/10 pb-6 mb-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 reveal">
+          <div class="flex flex-wrap gap-2" id="blog-category-filters">
+            <button onclick="filterBlog('All')" class="px-4 py-2 text-xs font-semibold uppercase tracking-wider bg-siennaDark text-siennaBg border border-siennaDark" data-blog-filter="All">All Articles</button>
+            <button onclick="filterBlog('Process')" class="px-4 py-2 text-xs font-semibold uppercase tracking-wider bg-siennaBg text-siennaLight hover:text-siennaPrimary border border-siennaDark/5 shadow-sm transition-all" data-blog-filter="Process">Process</button>
+            <button onclick="filterBlog('Insights')" class="px-4 py-2 text-xs font-semibold uppercase tracking-wider bg-siennaBg text-siennaLight hover:text-siennaPrimary border border-siennaDark/5 shadow-sm transition-all" data-blog-filter="Insights">Insights</button>
+            <button onclick="filterBlog('Behind the Scenes')" class="px-4 py-2 text-xs font-semibold uppercase tracking-wider bg-siennaBg text-siennaLight hover:text-siennaPrimary border border-siennaDark/5 shadow-sm transition-all" data-blog-filter="Behind the Scenes">Behind the scenes</button>
+            <button onclick="filterBlog('Interviews')" class="px-4 py-2 text-xs font-semibold uppercase tracking-wider bg-siennaBg text-siennaLight hover:text-siennaPrimary border border-siennaDark/5 shadow-sm transition-all" data-blog-filter="Interviews">Interviews</button>
+          </div>
+          <span class="text-[10px] tracking-widest text-siennaLight font-bold uppercase" id="blog-posts-count">Showing 4 Articles</span>
+        </div>
+
+        <!-- Blog posts grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="journal-posts-grid">
+          <!-- Populated dynamically in app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 6. EXPANDED ABOUT PAGE VIEW (ID: about-view) -->
+    <!-- ========================================================================= -->
+    <section id="about-view" class="view-pane w-full py-16 md:px-16 px-8 bg-siennaHighlight/25">
+      <div class="max-w-7xl mx-auto">
+        <!-- Main Intro -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
+          <!-- Text -->
+          <div class="lg:col-span-7 flex flex-col justify-center reveal">
+            <span class="font-handwritten text-4xl text-siennaPrimary mb-2 block">Our Philosophy</span>
+            <h1 class="font-serif text-5xl md:text-7xl text-siennaDark leading-tight mb-8">Creating Spaces <br>for <span class="italic text-siennaPrimary">Deep Breath            <p class="text-siennaLight font-sans font-light text-base leading-relaxed mb-6">
+              Elena Rossi's creative mission is driven by a deep longing for quietude. In a world dominated by rapid digital noise, the Sienna Muse studio seeks the tactile, the intentional, and the weathered. She emphasizes organic geometries, high-end bohemian luxury materials, and earth-toned photographic emulsions that slow down the viewer's breathing rate.
+            </p>
+            <p class="text-siennaLight font-sans font-light text-base leading-relaxed mb-6">
+              Each piece is created in small numbered series. Elena builds fine-art photography and rustic multimedia collages using organic elements — dried oak moss, raw beeswax, heavy natural linen, and hand-ground clays, bringing a tactile depth to fine-art landscapes.
+            </p>
+            <p class="text-siennaLight font-sans font-light text-base leading-relaxed mb-8">
+              She collaborates with residential architects, luxury hospitality teams, and private collectors worldwide to install large-scale pieces that turn spaces into serene sanctuaries.
+            </p>ene sanctuaries.
+            </p>
+            
+            <!-- Quick facts grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 py-6 border-t border-b border-siennaDark/10">
+              <div class="flex flex-col">
+                <span class="font-serif text-2xl text-siennaPrimary font-semibold">14+</span>
+                <span class="text-[9px] uppercase tracking-widest text-siennaLight font-bold mt-1">Exhibitions</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-serif text-2xl text-siennaPrimary font-semibold">100%</span>
+                <span class="text-[9px] uppercase tracking-widest text-siennaLight font-bold mt-1">Archival Quality</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-serif text-2xl text-siennaPrimary font-semibold">220+</span>
+                <span class="text-[9px] uppercase tracking-widest text-siennaLight font-bold mt-1">Collectors</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-serif text-2xl text-siennaPrimary font-semibold">Open</span>
+                <span class="text-[9px] uppercase tracking-widest text-siennaLight font-bold mt-1">Commissions Status</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Organic Image panel -->
+          <div class="lg:col-span-5 relative reveal delay-200">
+            <div class="absolute inset-0 bg-siennaPrimary/5 rounded-organic blob-morph scale-105 z-0" style="animation-duration: 15s;"></div>
+            <div class="relative aspect-[3/4] w-full rounded-organic overflow-hidden shadow-2xl border-4 border-siennaBg z-10 img-zoom-container">
+              <img src="assets/journal_philosophy.png" alt="Bohemian Studio Design" class="w-full h-full object-cover img-zoom">
+            </div>
+            <!-- Status Badge overlay -->
+            <div class="absolute -top-4 -right-4 bg-siennaSecondary text-siennaBg text-[10px] uppercase font-bold tracking-widest px-4 py-2 border border-siennaBg shadow-lg transform rotate-2 z-20">
+              Commissions Open
+            </div>
+          </div>
+        </div>
+
+        <!-- The Process section -->
+        <div class="py-20 border-t border-siennaDark/10 mb-20 reveal">
+          <span class="font-handwritten text-4xl text-siennaPrimary text-center block mb-3">Behind the Scenes</span>
+          <h2 class="font-serif text-4xl text-siennaDark text-center mb-16">The Artistic Methodology</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-siennaBg/65 border border-siennaDark/5 p-8 shadow-md">
+              <span class="text-siennaPrimary/20 font-serif text-5xl font-semibold block mb-4">01</span>
+              <h3 class="font-serif text-xl text-siennaDark mb-4">Analog Sourcing</h3>
+              <p class="text-siennaLight font-light text-sm leading-relaxed">
+                Capturing natural patterns using antique medium format camera bodies. Sourced natural objects are gathered intentionally along rugged coastlines and stone paths.
+              </p>
+            </div>
+            <div class="bg-siennaBg/65 border border-siennaDark/5 p-8 shadow-md">
+              <span class="text-siennaPrimary/20 font-serif text-5xl font-semibold block mb-4">02</span>
+              <h3 class="font-serif text-xl text-siennaDark mb-4">Mixed Media Collaging</h3>
+              <p class="text-siennaLight font-light text-sm leading-relaxed">
+                Layering prints onto heavyweight textured raw-edge Japanese mulberry and cotton rag paper, incorporating hand-sifted clay wash pigments and warm local beeswax coatings.
+              </p>
+            </div>
+            <div class="bg-siennaBg/65 border border-siennaDark/5 p-8 shadow-md">
+              <span class="text-siennaPrimary/20 font-serif text-5xl font-semibold block mb-4">03</span>
+              <h3 class="font-serif text-xl text-siennaDark mb-4">Archival Framing</h3>
+              <p class="text-siennaLight font-light text-sm leading-relaxed">
+                Framing finished pieces behind premium optical museum glass within locally crafted FSC maple wood framing, providing decades of color and structural preservation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Awards & Shows Grid -->
+        <div class="py-20 border-t border-siennaDark/10 mb-20 reveal">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div class="lg:col-span-4">
+              <span class="font-handwritten text-3xl text-siennaPrimary block mb-1">Accreditation</span>
+              <h2 class="font-serif text-3xl text-siennaDark">Credentials & Exhibitions</h2>
+              <p class="text-siennaLight font-light text-sm leading-relaxed mt-4">
+                A brief list of industry awards, select juried galleries, and prominent permanent collections housing Elena Rossi's original work.
+              </p>
+            </div>
+            <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <!-- Credentials block -->
+              <div class="flex flex-col border-b border-siennaDark/10 pb-4">
+                <span class="text-[10px] uppercase font-bold tracking-widest text-siennaPrimary">2025</span>
+                <span class="font-serif text-base text-siennaDark mt-1">First Place — Contemporary Fine Art Photography Awards</span>
+                <span class="text-siennaLight text-xs mt-1">Juried Art Panel, Rome Fine Art Coalition</span>
+              </div>
+              <div class="flex flex-col border-b border-siennaDark/10 pb-4">
+                <span class="text-[10px] uppercase font-bold tracking-widest text-siennaPrimary">2024</span>
+                <span class="font-serif text-base text-siennaDark mt-1">Solo Exhibition — "Silent Earth" Collection</span>
+                <span class="text-siennaLight text-xs mt-1">Hesperia Minimal Gallery, Barcelona</span>
+              </div>
+              <div class="flex flex-col border-b border-siennaDark/10 pb-4">
+                <span class="text-[10px] uppercase font-bold tracking-widest text-siennaPrimary">2023</span>
+                <span class="font-serif text-base text-siennaDark mt-1">Artist-in-Residence Fellowship</span>
+                <span class="text-siennaLight text-xs mt-1">Mediterranean Clay & Emulsion Studies, Greece</span>
+              </div>
+              <div class="flex flex-col border-b border-siennaDark/10 pb-4">
+                <span class="text-[10px] uppercase font-bold tracking-widest text-siennaPrimary">2022</span>
+                <span class="font-serif text-base text-siennaDark mt-1">Juried Selection Showcase — "Boho Alchemy"</span>
+                <span class="text-siennaLight text-xs mt-1">New York Center for Minimal Arts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drag Testimonials Slider Carousel -->
+        <div class="border-t border-siennaDark/10 pt-20 reveal">
+          <div class="max-w-4xl mx-auto text-center">
+            <span class="font-handwritten text-3xl text-siennaPrimary block mb-2">Artistic Affection</span>
+            <h2 class="font-serif text-3xl md:text-4xl text-siennaDark mb-12">Collector Testimonials</h2>
+            
+            <!-- Slides container -->
+            <div class="relative overflow-hidden w-full select-none" id="testimonials-carousel">
+              <div class="carousel-track flex flex-col sm:flex-row items-stretch gap-6" id="testimonials-inner-track">
+                <!-- Testimonial cards -->
+                <div class="w-full sm:w-[450px] shrink-0 bg-siennaBg border border-siennaDark/5 p-8 shadow-lg text-left">
+                  <iconify-icon icon="ph:quotes-thin" class="text-4xl text-siennaPrimary/20 block mb-4"></iconify-icon>
+                  <p class="text-siennaLight font-light italic text-sm leading-relaxed mb-6">
+                    "Adding two large botanical studies by Sienna to our organic living room design transformed the entire atmosphere. The prints have a beautiful, velvety plaster texture that glows under soft lighting. Breath of fresh air."
+                  </p>
+                  <span class="font-serif text-sm text-siennaDark block font-semibold">— Marcus & Elena V.</span>
+                  <span class="text-[9px] uppercase tracking-widest text-siennaLight font-medium block mt-1">Private Collectors, Zurich Residence</span>
+                </div>
+                <div class="w-full sm:w-[450px] shrink-0 bg-siennaBg border border-siennaDark/5 p-8 shadow-lg text-left">
+                  <iconify-icon icon="ph:quotes-thin" class="text-4xl text-siennaPrimary/20 block mb-4"></iconify-icon>
+                  <p class="text-siennaLight font-light italic text-sm leading-relaxed mb-6">
+                    "Sienna Muse has an incredible, distinct ability to convey quietude. The craftsmanship of the custom hand-ground clay washes surrounding the photograph makes it feel incredibly tactile and authentic."
+                  </p>
+                  <span class="font-serif text-sm text-siennaDark block font-semibold">— Dr. Clara Sterling</span>
+                  <span class="text-[9px] uppercase tracking-widest text-siennaLight font-medium block mt-1">Art Historian & Collector, NY Suite</span>
+                </div>
+                <div class="w-full sm:w-[450px] shrink-0 bg-siennaBg border border-siennaDark/5 p-8 shadow-lg text-left">
+                  <iconify-icon icon="ph:quotes-thin" class="text-4xl text-siennaPrimary/20 block mb-4"></iconify-icon>
+                  <p class="text-siennaLight font-light italic text-sm leading-relaxed mb-6">
+                    "Commissioning our custom coastlines sequence was a collaborative joy. Sienna matched our home’s HSL sienna accents perfectly, building custom maple frames that act as windows into nature."
+                  </p>
+                  <span class="font-serif text-sm text-siennaDark block font-semibold">— Arthur Vance</span>
+                  <span class="text-[9px] uppercase tracking-widest text-siennaLight font-medium block mt-1">Founder, Vance Hospitality Group</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 7. SERVICES/COMMISSIONS PAGE VIEW (ID: services-view) -->
+    <!-- ========================================================================= -->
+    <section id="services-view" class="view-pane w-full py-16 md:px-16 px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-20 reveal">
+          <span class="font-handwritten text-4xl text-siennaPrimary block mb-2">Collaborative Creations</span>
+          <h1 class="font-serif text-5xl md:text-6xl text-siennaDark">Services & Commissions</h1>
+          <p class="text-siennaLight font-light max-w-xl mx-auto mt-4 leading-relaxed text-sm md:text-base">
+            Custom fine-art commissions, architectural series integration, studio styling consults, and custom-ordered archival landscape framing packages.
+          </p>
+        </div>
+
+        <!-- Service cards grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-24">
+          <!-- Service 1 -->
+          <div class="bg-siennaHighlight/35 border border-siennaDark/5 p-8 flex flex-col justify-between hover-float reveal">
+            <div>
+              <iconify-icon icon="ph:sketch-logo-thin" class="text-4xl text-siennaPrimary mb-6 block"></iconify-icon>
+              <h3 class="font-serif text-2xl text-siennaDark mb-4">Custom Commission</h3>
+              <p class="text-siennaLight font-light text-sm leading-relaxed mb-6">
+                Tailored photographic prints with hand-mixed clay washes and beeswax overlay coatings, matched to the color palette of your interior design workspace.
+              </p>
+            </div>
+            <div>
+              <span class="font-serif text-base text-siennaPrimary block font-bold mb-4">Starting at $1,200</span>
+              <button onclick="toggleInquiryDrawer(true)" class="text-xs uppercase tracking-widest font-bold text-siennaDark hover:text-siennaPrimary flex items-center group">
+                Inquire Details
+                <iconify-icon icon="ph:arrow-right-thin" class="ml-1.5 transition-transform duration-300 group-hover:translate-x-1"></iconify-icon>
+              </button>
+            </div>
+          </div>
+          <!-- Service 2 -->
+          <div class="bg-siennaHighlight/35 border border-siennaDark/5 p-8 flex flex-col justify-between hover-float reveal delay-100">
+            <div>
+              <iconify-icon icon="ph:image-square-thin" class="text-4xl text-siennaPrimary mb-6 block"></iconify-icon>
+              <h3 class="font-serif text-2xl text-siennaDark mb-4">Archival Prints</h3>
+              <p class="text-siennaLight font-light text-sm leading-relaxed mb-6">
+                Limited-edition prints on natural museum rag sheets. Sized individually, numbered, hand-signed, and packaged in protective earth-friendly wraps.
+              </p>
+            </div>
+            <div>
+              <span class="font-serif text-base text-siennaPrimary block font-bold mb-4">Starting at $250</span>
+              <button onclick="toggleInquiryDrawer(true)" class="text-xs uppercase tracking-widest font-bold text-siennaDark hover:text-siennaPrimary flex items-center group">
+                Inquire Details
+                <iconify-icon icon="ph:arrow-right-thin" class="ml-1.5 transition-transform duration-300 group-hover:translate-x-1"></iconify-icon>
+              </button>
+            </div>
+          </div>
+          <!-- Service 3 -->
+          <div class="bg-siennaHighlight/35 border border-siennaDark/5 p-8 flex flex-col justify-between hover-float reveal delay-200">
+            <div>
+              <iconify-icon icon="ph:compass-thin" class="text-4xl text-siennaPrimary mb-6 block"></iconify-icon>
+              <h3 class="font-serif text-2xl text-siennaDark mb-4">Studio Consulting</h3>
+              <p class="text-siennaLight font-light text-sm leading-relaxed mb-6">
+                Interior curation consults for luxury residences, commercial workspaces, and boutique hotels looking to infuse bohemian minimalist tranquility.
+              </p>
+            </div>
+            <div>
+              <span class="font-serif text-base text-siennaPrimary block font-bold mb-4">Starting at $150/hr</span>
+              <button onclick="toggleInquiryDrawer(true)" class="text-xs uppercase tracking-widest font-bold text-siennaDark hover:text-siennaPrimary flex items-center group">
+                Inquire Details
+                <iconify-icon icon="ph:arrow-right-thin" class="ml-1.5 transition-transform duration-300 group-hover:translate-x-1"></iconify-icon>
+              </button>
+            </div>
+          </div>
+          <!-- Service 4 -->
+          <div class="bg-siennaHighlight/35 border border-siennaDark/5 p-8 flex flex-col justify-between hover-float reveal delay-300">
+            <div>
+              <iconify-icon icon="ph:squares-four-thin" class="text-4xl text-siennaPrimary mb-6 block"></iconify-icon>
+              <h3 class="font-serif text-2xl text-siennaDark mb-4">Private Showcase</h3>
+              <p class="text-siennaLight font-light text-sm leading-relaxed mb-6">
+                Arranging temporary showcases, gallery takeovers, studio pop-ups, and fine-art collaborative exhibitions with creative retail showrooms.
+              </p>
+            </div>
+            <div>
+              <span class="font-serif text-base text-siennaPrimary block font-bold mb-4">Price on Inquiry</span>
+              <button onclick="toggleInquiryDrawer(true)" class="text-xs uppercase tracking-widest font-bold text-siennaDark hover:text-siennaPrimary flex items-center group">
+                Inquire Details
+                <iconify-icon icon="ph:arrow-right-thin" class="ml-1.5 transition-transform duration-300 group-hover:translate-x-1"></iconify-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Accordion section -->
+        <div class="max-w-4xl mx-auto border-t border-siennaDark/10 pt-20 reveal">
+          <span class="font-handwritten text-4xl text-siennaPrimary text-center block mb-2">Inquiries</span>
+          <h2 class="font-serif text-4xl text-siennaDark text-center mb-12">Frequently Asked Questions</h2>
+          
+          <div class="space-y-4" id="faq-accordions-container">
+            <!-- FAQ 1 -->
+            <div class="border border-siennaDark/10 bg-siennaBg shadow-sm">
+              <button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaqAccordion(this)">
+                <span class="font-serif text-base md:text-lg text-siennaDark font-medium">What is the standard turnaround for a custom commission artwork?</span>
+                <iconify-icon icon="ph:plus-light" class="text-xl text-siennaPrimary transition-transform duration-300"></iconify-icon>
+              </button>
+              <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+                <p class="text-siennaLight font-light text-sm leading-relaxed pb-5">
+                  Because our custom pieces are created analog, layered manually with pigment washes, and treated with pure hot organic beeswax overlays, the production time is typically 6 to 8 weeks. This timeframe includes the selection of custom maple framing, local finishing, and temperature-controlled shipping.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ 2 -->
+            <div class="border border-siennaDark/10 bg-siennaBg shadow-sm">
+              <button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaqAccordion(this)">
+                <span class="font-serif text-base md:text-lg text-siennaDark font-medium">What does "archival quality" mean in your studio?</span>
+                <iconify-icon icon="ph:plus-light" class="text-xl text-siennaPrimary transition-transform duration-300"></iconify-icon>
+              </button>
+              <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+                <p class="text-siennaLight font-light text-sm leading-relaxed pb-5">
+                  It means all photography is printed using certified acid-free mineral pigment inks onto 100% natural cotton rag or traditional fibrous mulberry papers (310gsm+). Combined with museum glass frames, these materials are chemically stable and guaranteed to prevent yellowing or fading for up to 100 years.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ 3 -->
+            <div class="border border-siennaDark/10 bg-siennaBg shadow-sm">
+              <button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaqAccordion(this)">
+                <span class="font-serif text-base md:text-lg text-siennaDark font-medium">Can I request dynamic sizes or alternative framing species?</span>
+                <iconify-icon icon="ph:plus-light" class="text-xl text-siennaPrimary transition-transform duration-300"></iconify-icon>
+              </button>
+              <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+                <p class="text-siennaLight font-light text-sm leading-relaxed pb-5">
+                  Yes, absolutely. While we recommend local FSC-certified natural maple wood as it pairs harmoniously with sienna/clay tones, we frequently collaborate with clients to supply oak, walnut, or charred shou-sugi-ban frames. Size ranges can span from 12x16 inches up to large-scale 48x72 inches installations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 8. CONTACT PAGE VIEW (ID: contact-view) -->
+    <!-- ========================================================================= -->
+    <section id="contact-view" class="view-pane w-full py-16 md:px-16 px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16 reveal">
+          <span class="font-handwritten text-4xl text-siennaPrimary block mb-2">Studio Inquiry</span>
+          <h1 class="font-serif text-5xl md:text-6xl text-siennaDark">Let us build together</h1>
+          <p class="text-siennaLight font-light max-w-xl mx-auto mt-4 leading-relaxed text-sm md:text-base">
+            Have questions about custom commissions, shipping rates, or framing specifications? Send our studio a detailed inquiry.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
+          <!-- Left: Detailed validation Form -->
+          <div class="lg:col-span-7 bg-siennaHighlight/20 border border-siennaDark/5 p-8 md:p-10 shadow-sm reveal">
+            <h3 class="font-serif text-2xl text-siennaDark mb-8">Send a Detailed Message</h3>
+            
+            <form id="detailed-contact-form" class="space-y-6">
+              <!-- Name & Email -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="flex flex-col">
+                  <label for="contact-name" class="text-[10px] uppercase font-bold tracking-widest text-siennaLight mb-2">Your Name *</label>
+                  <input type="text" id="contact-name" required placeholder="E.g., Julian Vance" class="px-4 py-3 border border-siennaDark/15 focus:outline-none focus:border-siennaPrimary text-sm font-sans bg-siennaBg text-siennaDark rounded-none">
+                </div>
+                <div class="flex flex-col">
+                  <label for="contact-email" class="text-[10px] uppercase font-bold tracking-widest text-siennaLight mb-2">Your Email Address *</label>
+                  <input type="email" id="contact-email" required placeholder="E.g., julian@vancedesign.com" class="px-4 py-3 border border-siennaDark/15 focus:outline-none focus:border-siennaPrimary text-sm font-sans bg-siennaBg text-siennaDark rounded-none">
+                </div>
+              </div>
+
+              <!-- Project Category Dropdown -->
+              <div class="flex flex-col">
+                <label for="contact-project-type" class="text-[10px] uppercase font-bold tracking-widest text-siennaLight mb-2">Inquiry Type</label>
+                <select id="contact-project-type" class="px-4 py-3 border border-siennaDark/15 focus:outline-none focus:border-siennaPrimary text-sm font-sans bg-siennaBg text-siennaDark rounded-none tracking-wide">
+                  <option value="Fine Art Print">Limited-Edition Archival Print Order</option>
+                  <option value="Custom Commission">Custom Multi-Media Commission Series</option>
+                  <option value="Gallery Collaboration">Gallery Representation or Showcase</option>
+                  <option value="Design Styling">Residential/Hospitality Curation Consulting</option>
+                  <option value="General Question">General Studio Inquiry</option>
+                </select>
+              </div>
+
+              <!-- Premium Budget Range Slider -->
+              <div class="flex flex-col">
+                <div class="flex justify-between items-center mb-2">
+                  <label for="contact-budget" class="text-[10px] uppercase font-bold tracking-widest text-siennaLight">Estimated Budget Allowance</label>
+                  <span id="budget-value-indicator" class="text-xs font-semibold text-siennaPrimary tracking-wider">$1,500</span>
+                </div>
+                <input type="range" id="contact-budget" min="250" max="10000" step="250" value="1500" oninput="updateBudgetIndicator(this.value)" class="w-full accent-siennaPrimary cursor-pointer h-1 bg-siennaDark/10 rounded-lg">
+                <div class="flex justify-between text-[9px] text-siennaLight mt-2 tracking-widest font-semibold uppercase">
+                  <span>$250</span>
+                  <span>$5,000</span>
+                  <span>$10,000+</span>
+                </div>
+              </div>
+
+              <!-- Message box -->
+              <div class="flex flex-col">
+                <label for="contact-message" class="text-[10px] uppercase font-bold tracking-widest text-siennaLight mb-2">Project Details or Message *</label>
+                <textarea id="contact-message" required rows="6" placeholder="Describe the atmosphere, framing desires, or specific questions you have for the studio..." class="px-4 py-3 border border-siennaDark/15 focus:outline-none focus:border-siennaPrimary text-sm font-sans bg-siennaBg text-siennaDark rounded-none leading-relaxed resize-none"></textarea>
+              </div>
+
+              <div class="pt-2">
+                <button type="submit" class="w-full px-8 py-4 bg-siennaPrimary hover:bg-siennaTertiary text-siennaBg text-xs font-bold uppercase tracking-widest transition-colors shadow-md">
+                  Submit Dynamic Booking Request
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right: Studio Details & Mock Map -->
+          <div class="lg:col-span-5 flex flex-col justify-between gap-10 reveal delay-200">
+            <div class="bg-siennaHighlight/50 border border-siennaDark/5 p-8 shadow-sm">
+              <h3 class="font-serif text-2xl text-siennaDark mb-6">Sienna Muse Studio</h3>
+              
+              <div class="space-y-6">
+                <div class="flex items-start space-x-4">
+                  <iconify-icon icon="ph:map-pin-light" class="text-2xl text-siennaPrimary mt-0.5"></iconify-icon>
+                  <div>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-siennaLight block">Studio Headquarters</span>
+                    <span class="text-sm text-siennaDark mt-1 block leading-relaxed font-light">128 Sienna Clay Way, Coastal Bluffs,<br>Carmel-by-the-Sea, California 93923</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                  <iconify-icon icon="ph:envelope-simple-light" class="text-2xl text-siennaPrimary mt-0.5"></iconify-icon>
+                  <div>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-siennaLight block">Studio Email</span>
+                    <a href="mailto:hello@siennamuse.com" class="text-sm text-siennaPrimary mt-1 block hover:underline tracking-wide font-medium">hello@siennamuse.com</a>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                  <iconify-icon icon="ph:phone-light" class="text-2xl text-siennaPrimary mt-0.5"></iconify-icon>
+                  <div>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-siennaLight block">Direct Telephone</span>
+                    <span class="text-sm text-siennaDark mt-1 block font-light">+1 (831) 459-2810</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                  <iconify-icon icon="ph:clock-light" class="text-2xl text-siennaPrimary mt-0.5"></iconify-icon>
+                  <div>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-siennaLight block">Inquiry Hours</span>
+                    <span class="text-sm text-siennaDark mt-1 block font-light">Tuesday — Saturday: 10:00 AM – 5:00 PM PST</span>
+                    <span class="text-[9px] text-siennaSecondary uppercase font-bold tracking-wider mt-1 block">● Standard response within 24 hours</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stylized Vector Studio Map -->
+            <div class="relative w-full aspect-[4/3] bg-siennaBg border border-siennaDark/10 overflow-hidden shadow-md flex justify-center items-center">
+              <!-- Grid elements to look like a premium abstract mapping -->
+              <div class="absolute inset-0 bg-[radial-gradient(#A0522D_1px,transparent_1px)] [background-size:16px_16px] opacity-10"></div>
+              <div class="absolute w-[80%] h-[1px] bg-siennaDark/10 transform rotate-12"></div>
+              <div class="absolute w-[70%] h-[1px] bg-siennaDark/10 transform -rotate-45"></div>
+              <div class="absolute w-[90%] h-[1px] bg-siennaDark/10 transform rotate-90 left-1/3"></div>
+              
+              <!-- Abstract bay water area -->
+              <div class="absolute top-0 right-0 w-[40%] h-[40%] bg-siennaSecondary/5 rounded-full filter blur-xl"></div>
+              <!-- Carmel point sienna marker -->
+              <div class="relative flex flex-col items-center z-10 animate-soft-float">
+                <div class="w-8 h-8 rounded-full bg-siennaPrimary flex justify-center items-center text-siennaBg shadow-lg border border-siennaBg">
+                  <iconify-icon icon="ph:house-line-thin" class="text-lg"></iconify-icon>
+                </div>
+                <span class="bg-siennaBg border border-siennaDark/15 px-3 py-1.5 text-[9px] uppercase font-bold mt-2 shadow-md tracking-wider text-siennaPrimary">Sienna Studio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 9. PRIVATE GALLERY VIEW (ID: private-view) -->
+    <!-- ========================================================================= -->
+    <section id="private-view" class="view-pane w-full py-16 md:px-16 px-8">
+      <div class="max-w-6xl mx-auto">
+        <div id="private-view-container" class="min-h-screen"></div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 10. ADMIN DASHBOARD VIEW (ID: admin-view) -->
+    <!-- ========================================================================= -->
+    <section id="admin-view" class="view-pane w-full py-16 md:px-16 px-8">
+      <div class="max-w-6xl mx-auto">
+        <div id="admin-dashboard" class="min-h-screen bg-siennaBg border border-siennaDark/5 p-8 rounded-lg shadow-md">
+          <!-- Admin login/dashboard will render here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 11. CLIENT PORTAL VIEW (ID: client-portal-view) -->
+    <!-- ========================================================================= -->
+    <section id="client-portal-view" class="view-pane w-full py-16 md:px-16 px-8">
+      <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <div class="mb-12 reveal">
+          <h1 class="font-serif text-4xl md:text-5xl text-siennaDark mb-4">Client Portal</h1>
+          <p class="text-siennaLight font-light text-lg">Access your assigned projects, download proofs, and communicate with our studio.</p>
+          <div class="h-[1px] w-20 bg-siennaPrimary mt-6"></div>
+        </div>
+
+        <!-- Client Welcome Message -->
+        <div id="client-welcome" class="bg-siennaHighlight border border-siennaDark/5 p-6 rounded-lg mb-8 reveal">
+          <p class="text-siennaLight"><span class="font-semibold text-siennaDark">Welcome, Collector.</span> Your exclusive projects are listed below. All files are password-protected and expire after 30 days for security.</p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <!-- Assigned Project Card 1 -->
+          <div class="bg-siennaBg border border-siennaDark/5 p-6 shadow-sm hover-float reveal">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[9px] uppercase tracking-widest text-siennaPrimary bg-siennaHighlight px-3 py-1 font-semibold">Active</span>
+              <span class="text-xs text-siennaLight">Due: June 15, 2026</span>
+            </div>
+            <h3 class="font-serif text-lg text-siennaDark mb-2">Coastal Commission – Proofs</h3>
+            <p class="text-siennaLight font-light text-xs mb-4">3 high-resolution proof images + artist notes available for download.</p>
+            <div class="flex gap-2">
+              <button class="flex-1 px-3 py-2 bg-siennaPrimary text-siennaBg text-xs font-bold uppercase tracking-widest hover:bg-siennaTertiary transition-colors">Download</button>
+              <button class="flex-1 px-3 py-2 bg-siennaHighlight text-siennaDark text-xs font-bold uppercase tracking-widest hover:bg-siennaPrimary/10 transition-colors border border-siennaDark/10">Message</button>
+            </div>
+          </div>
+
+          <!-- Assigned Project Card 2 -->
+          <div class="bg-siennaBg border border-siennaDark/5 p-6 shadow-sm hover-float reveal" style="--stagger-index: 1">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[9px] uppercase tracking-widest text-siennaSecondary bg-siennaHighlight px-3 py-1 font-semibold">Archived</span>
+              <span class="text-xs text-siennaLight">Completed: April 2, 2026</span>
+            </div>
+            <h3 class="font-serif text-lg text-siennaDark mb-2">Mediterranean Series – Final Delivery</h3>
+            <p class="text-siennaLight font-light text-xs mb-4">5 signed archival prints + framing specifications. Archived for reference.</p>
+            <div class="flex gap-2">
+              <button class="flex-1 px-3 py-2 bg-siennaHighlight text-siennaDark text-xs font-bold uppercase tracking-widest hover:bg-siennaPrimary/10 transition-colors border border-siennaDark/10">View</button>
+              <button class="flex-1 px-3 py-2 bg-siennaHighlight text-siennaDark text-xs font-bold uppercase tracking-widest hover:bg-siennaPrimary/10 transition-colors border border-siennaDark/10">Redownload</button>
+            </div>
+          </div>
+
+          <!-- New Project Notification -->
+          <div class="bg-siennaBg border border-siennaPrimary/30 p-6 shadow-sm hover-float reveal" style="--stagger-index: 2">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[9px] uppercase tracking-widest text-siennaTertiary bg-siennaHighlight px-3 py-1 font-semibold">Coming Soon</span>
+            </div>
+            <h3 class="font-serif text-lg text-siennaDark mb-2">New Project Assignment</h3>
+            <p class="text-siennaLight font-light text-xs mb-4">Stay tuned for a new exclusive project from the studio. Check back soon for details.</p>
+            <button disabled class="w-full px-3 py-2 bg-siennaHighlight text-siennaLight text-xs font-bold uppercase tracking-widest cursor-not-allowed opacity-50">Not Available Yet</button>
+          </div>
+        </div>
+
+        <!-- Messaging Section -->
+        <div class="bg-siennaHighlight border border-siennaDark/5 p-8 rounded-lg reveal">
+          <h2 class="font-serif text-2xl text-siennaDark mb-6">Direct Studio Messaging</h2>
+          <div class="bg-siennaBg p-4 rounded-lg max-h-64 overflow-y-auto mb-4 border border-siennaDark/5">
+            <div class="text-siennaLight text-xs text-center py-8">No messages yet. Contact the studio to start a conversation.</div>
+          </div>
+          <div class="flex gap-2">
+            <input type="text" placeholder="Type your message..." class="flex-1 px-4 py-3 border border-siennaDark/15 focus:outline-none focus:border-siennaPrimary text-sm font-sans bg-siennaBg">
+            <button class="px-6 py-3 bg-siennaPrimary text-siennaBg text-xs font-bold uppercase tracking-widest hover:bg-siennaTertiary transition-colors">Send</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 12. LOGIN MODAL VIEW (ID: login-view) -->
+    <!-- ========================================================================= -->
+    <section id="login-view" class="view-pane w-full py-16 md:px-16 px-8">
+      <div class="max-w-md mx-auto">
+        <div class="bg-siennaBg border border-siennaDark/5 p-12 rounded-lg shadow-lg">
+          <!-- Logo -->
+          <div class="text-center mb-12">
+            <span class="font-serif text-2xl tracking-wide font-medium text-siennaDark">Sienna <em class="font-light not-italic text-siennaLight">Muse</em></span>
+            <p class="font-handwritten text-sm text-siennaPrimary mt-2">earth & soul art studio</p>
+          </div>
+
+          <!-- Login Form -->
+          <h1 class="font-serif text-3xl text-siennaDark text-center mb-2">Studio Access</h1>
+          <p class="text-siennaLight text-center text-sm mb-8">Sign in to your private gallery or admin dashboard.</p>
+
+          <form id="login-form" class="space-y-6">
+            <div class="flex flex-col">
+              <label for="login-email" class="text-[10px] uppercase font-bold tracking-widest text-siennaLight mb-2">Email Address</label>
+              <input type="email" id="login-email" required placeholder="your@email.com" class="px-4 py-3 border border-siennaDark/15 focus:outline-none focus:border-siennaPrimary text-sm font-sans bg-siennaHighlight/25">
+            </div>
+
+            <div class="flex flex-col">
+              <label for="login-password" class="text-[10px] uppercase font-bold tracking-widest text-siennaLight mb-2">Password or Access Code</label>
+              <input type="password" id="login-password" required placeholder="••••••••" class="px-4 py-3 border border-siennaDark/15 focus:outline-none focus:border-siennaPrimary text-sm font-sans bg-siennaHighlight/25">
+            </div>
+
+            <button type="button" onclick="handleLoginSubmit()" class="w-full px-6 py-4 bg-siennaPrimary hover:bg-siennaTertiary text-siennaBg text-xs font-bold uppercase tracking-widest transition-colors">
+              Sign In
+            </button>
+          </form>
+
+          <div class="mt-8 pt-8 border-t border-siennaDark/10 text-center">
+            <p class="text-xs text-siennaLight">Don't have access yet?</p>
+            <button onclick="window.location.hash = '#private/private-coastal-commission'" class="text-siennaPrimary font-semibold hover:text-siennaTertiary text-xs mt-2 uppercase tracking-widest">Request Private Gallery Access</button>
+          </div>
+
+          <div class="mt-6 text-center text-[9px] text-siennaSecondary uppercase tracking-widest font-light">
+            Demo: Use email "demo@studio.com" and any password to test
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 13. SETTINGS/PROFILE PAGE (ID: settings-view) -->
+    <!-- ========================================================================= -->
+    <section id="settings-view" class="view-pane w-full py-16 md:px-16 px-8">
+      <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <div class="mb-12 reveal">
+          <h1 class="font-serif text-4xl md:text-5xl text-siennaDark mb-4">Account Settings</h1>
+          <p class="text-siennaLight font-light text-lg">Manage your profile, email preferences, and gallery access.</p>
+          <div class="h-[1px] w-20 bg-siennaPrimary mt-6"></div>
+        </div>
+
+        <!-- Settings Tabs Navigation -->
+        <div class="flex border-b border-siennaDark/10 mb-8 gap-8 reveal">
+          <button onclick="switchSettingsTab('profile')" class="tab-button active px-4 py-3 text-xs font-bold uppercase tracking-widest text-siennaPrimary border-b-2 border-siennaPrimary" data-tab="profile">Profile</button>
+          <button onclick="switchSettingsTab('preferences')" class="tab-button px-4 py-3 text-xs font-bold uppercase tracking-widest text-siennaLight border-b-2 border-transparent hover:text-siennaPrimary" data-tab="preferences">Preferences</button>
+          <button onclick="switchSettingsTab('security')" class="tab-button px-4 py-3 text-xs font-bold uppercase tracking-widest text-siennaLight border-b-2 border-transparent hover:text-siennaPrimary" data-tab="security">Security</button>
+        </div>
+
+        <!-- Profile Tab -->
+        <div id="profile-tab" class="settings-tab reveal">
+          <div class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="flex flex-col">
+                <label class="text-[10px] uppercase font-bold tracking-widest text-siennaLight mb-2">Full Name</label>
+                <input type="text" value="Julian Vance" class="px-4 py-3 border border-siennaDark/15 focus:outline-none focus:border-siennaPrimary text-sm font-sans bg-siennaHighlight/25">
+              </div>
+              <div class="flex flex-col">
+                <label class="text-[10px] uppercase font-bold tracking-widest text-siennaLight mb-2">Email Address</label>
+                <input type="email" value="julian@vancedesign.com" class="px-4 py-3 border border-siennaDark/15 focus:outline-none focus:border-siennaPrimary text-sm font-sans bg-siennaHighlight/25">
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <label class="text-[10px] uppercase font-bold tracking-widest text-siennaLight mb-2">Bio / Collector Notes</label>
+              <textarea rows="4" class="px-4 py-3 border border-siennaDark/15 focus:outline-none focus:border-siennaPrimary text-sm font-sans bg-siennaHighlight/25 resize-none">Luxury home interior designer specializing in minimalist aesthetic and fine art curation.</textarea>
+            </div>
+            <button class="px-6 py-3 bg-siennaPrimary text-siennaBg text-xs font-bold uppercase tracking-widest hover:bg-siennaTertiary transition-colors">Save Changes</button>
+          </div>
+        </div>
+
+        <!-- Preferences Tab -->
+        <div id="preferences-tab" class="settings-tab hidden reveal">
+          <div class="space-y-6">
+            <div class="flex items-center justify-between p-4 bg-siennaHighlight border border-siennaDark/5 rounded-lg">
+              <div>
+                <h3 class="font-semibold text-siennaDark">Email Notifications</h3>
+                <p class="text-[10px] text-siennaLight mt-1">Receive updates about new projects and gallery changes.</p>
+              </div>
+              <label class="relative inline-flex cursor-pointer">
+                <input type="checkbox" checked class="sr-only peer">
+                <div class="w-11 h-6 bg-siennaLight peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-siennaPrimary rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-siennaPrimary"></div>
+              </label>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-siennaHighlight border border-siennaDark/5 rounded-lg">
+              <div>
+                <h3 class="font-semibold text-siennaDark">Marketing Updates</h3>
+                <p class="text-[10px] text-siennaLight mt-1">Get notified about new collections and exclusive releases.</p>
+              </div>
+              <label class="relative inline-flex cursor-pointer">
+                <input type="checkbox" class="sr-only peer">
+                <div class="w-11 h-6 bg-siennaLight peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-siennaPrimary rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-siennaPrimary"></div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Security Tab -->
+        <div id="security-tab" class="settings-tab hidden reveal">
+          <div class="space-y-6">
+            <div class="bg-siennaHighlight border border-siennaDark/5 p-6 rounded-lg">
+              <h3 class="font-semibold text-siennaDark mb-4">Change Password</h3>
+              <div class="space-y-4">
+                <input type="password" placeholder="Current Password" class="w-full px-4 py-3 border border-siennaDark/15 focus:outline-none focus:border-siennaPrimary text-sm font-sans bg-siennaBg">
+                <input type="password" placeholder="New Password" class="w-full px-4 py-3 border border-siennaDark/15 focus:outline-none focus:border-siennaPrimary text-sm font-sans bg-siennaBg">
+                <input type="password" placeholder="Confirm New Password" class="w-full px-4 py-3 border border-siennaDark/15 focus:outline-none focus:border-siennaPrimary text-sm font-sans bg-siennaBg">
+                <button class="px-6 py-3 bg-siennaPrimary text-siennaBg text-xs font-bold uppercase tracking-widest hover:bg-siennaTertiary transition-colors">Update Password</button>
+              </div>
+            </div>
+            <div class="bg-siennaHighlight border border-siennaDark/5 p-6 rounded-lg">
+              <h3 class="font-semibold text-siennaDark mb-2">Active Sessions</h3>
+              <p class="text-siennaLight text-xs mb-4">You are logged in on 1 device.</p>
+              <button class="text-xs text-siennaTertiary uppercase font-bold tracking-widest hover:underline">Sign Out All Devices</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- 9. DYNAMIC SLIDING INQUIRY DRAWER (SLIDES IN FROM RIGHT) -->
+  <!-- ========================================================================= -->
+  <div id="inquiry-drawer-overlay" class="fixed inset-0 bg-siennaDark/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-500" onclick="toggleInquiryDrawer(false)"></div>
+  <div id="inquiry-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-siennaBg shadow-2xl border-l border-siennaDark/5 z-50 transform translate-x-full transition-transform duration-500 ease-in-out p-8 md:p-10 flex flex-col justify-between overflow-y-auto">
+    <!-- Close trigger -->
+    <div class="flex justify-between items-center pb-6 border-b border-siennaDark/10">
+      <div>
+        <span class="font-serif text-xl text-siennaDark font-medium">Archival Inquiry</span>
+        <p class="text-[9px] uppercase font-semibold text-siennaPrimary tracking-widest mt-0.5">Sienna Muse Earth & Soul</p>
+      </div>
+      <button onclick="toggleInquiryDrawer(false)" aria-label="Close Inquiry Drawer" class="w-8 h-8 flex justify-center items-center hover:bg-siennaPrimary/10 transition-colors text-xl text-siennaLight">
+        <iconify-icon icon="ph:x-light"></iconify-icon>
+      </button>
+    </div>
+
+    <!-- Scrollable content -->
+    <form id="drawer-inquiry-form" class="space-y-6 py-8 flex-grow">
+      <div class="flex flex-col">
+        <label for="drawer-name" class="text-[10px] uppercase font-bold tracking-widest text-siennaLight mb-1.5">Your Name *</label>
+        <input type="text" id="drawer-name" required placeholder="Julian Vance" class="px-4 py-3 border border-siennaDark/15 focus:outline-none focus:border-siennaPrimary text-sm font-sans bg-siennaHighlight/25 text-siennaDark rounded-none">
+      </div>
+
+      <div class="flex flex-col">
+        <label for="drawer-email" class="text-[10px] uppercase font-bold tracking-widest text-siennaLight mb-1.5">Email Address *</label>
+        <input type="email" id="drawer-email" required placeholder="julian@vancedesign.com" class="px-4 py-3 border border-siennaDark/15 focus:outline-none focus:border-siennaPrimary text-sm font-sans bg-siennaHighlight/25 text-siennaDark rounded-none">
+      </div>
+
+      <div class="flex flex-col">
+        <label for="drawer-artwork" class="text-[10px] uppercase font-bold tracking-widest text-siennaLight mb-1.5">Interest Selection</label>
+        <select id="drawer-artwork" class="px-4 py-3 border border-siennaDark/15 focus:outline-none focus:border-siennaPrimary text-sm font-sans bg-siennaHighlight/25 text-siennaDark rounded-none tracking-wide">
+          <option value="General Commission">Custom Fine Art Commission</option>
+          <option value="Eucalyptus Study I">Archival Print: Eucalyptus Study I</option>
+          <option value="Draped Solitude II">Archival Print: Draped Solitude II</option>
+          <option value="Minimalist Stoneware">Archival Print: Minimalist Stoneware</option>
+          <option value="Decaying Wild Flora">Archival Print: Decaying Wild Flora</option>
+          <option value="Ethereal Reflection">Archival Print: Ethereal Reflection</option>
+          <option value="Consulting Curation">Luxury Curation Curation Consulting</option>
+        </select>
+      </div>
+
+      <div class="flex flex-col">
+        <label for="drawer-message" class="text-[10px] uppercase font-bold tracking-widest text-siennaLight mb-1.5">Specific Requests or Notes *</label>
+        <textarea id="drawer-message" required rows="4" placeholder="Share size constraints, framing goals, or delivery requests..." class="px-4 py-3 border border-siennaDark/15 focus:outline-none focus:border-siennaPrimary text-sm font-sans bg-siennaHighlight/25 text-siennaDark rounded-none resize-none leading-relaxed"></textarea>
+      </div>
+
+      <div class="pt-4">
+        <button type="submit" class="w-full px-8 py-4 bg-siennaPrimary hover:bg-siennaTertiary text-siennaBg text-xs font-bold uppercase tracking-widest transition-colors shadow-md">
+          Send Studio Request
+        </button>
+      </div>
+    </form>
+
+    <!-- Drawer Footer info -->
+    <div class="pt-6 border-t border-siennaDark/10 text-center">
+      <span class="text-[9px] uppercase tracking-widest text-siennaLight block font-semibold">Archival Studio In Carmel-by-the-sea</span>
+      <span class="text-[9px] text-siennaSecondary block mt-1 tracking-wide font-light">Direct Contact: hello@siennamuse.com</span>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 10. LIGHTBOX ARTWORK ZOOM DISPLAY -->
+  <!-- ========================================================================= -->
+  <div id="artwork-lightbox" class="fixed inset-0 bg-siennaDark/95 backdrop-blur-md z-50 opacity-0 pointer-events-none transition-opacity duration-300 flex flex-col justify-center items-center p-4">
+    <!-- Close Lightbox -->
+    <button onclick="closeLightbox()" aria-label="Close Lightbox" class="absolute top-6 right-6 w-12 h-12 bg-siennaBg/10 hover:bg-siennaBg/20 border border-siennaBg/15 flex justify-center items-center text-siennaBg text-2xl transition-colors">
+      <iconify-icon icon="ph:x-light"></iconify-icon>
+    </button>
+    <!-- Lightbox Image -->
+    <div class="relative max-w-4xl max-h-[80vh] overflow-hidden flex justify-center items-center shadow-2xl">
+      <img id="lightbox-zoomed-img" src="" alt="Zoomed view of Sienna Muse Artwork" class="object-contain max-h-[80vh] max-w-full">
+    </div>
+    <!-- Lightbox metadata overlay -->
+    <div class="mt-6 text-center text-siennaBg select-none">
+      <h4 id="lightbox-artwork-title" class="font-serif text-lg md:text-xl font-medium tracking-wide">Eucalyptus Study I</h4>
+      <p id="lightbox-artwork-medium" class="text-xs text-siennaHighlight/80 font-light mt-1">Archival pigment onto Japanese Mulberry, 2025</p>
+    </div>
+  </div>
+
+  <!-- PERSISTENT SUCCESS NOTIFICATION GRID -->
+  <div id="alert-notification" class="fixed bottom-6 right-6 bg-siennaSecondary text-siennaBg border border-siennaBg/15 px-6 py-4.5 shadow-2xl z-50 flex items-center space-x-3.5 transform translate-y-24 opacity-0 transition-all duration-500 rounded-none max-w-md">
+    <iconify-icon icon="ph:check-circle-thin" class="text-2xl text-siennaBg"></iconify-icon>
+    <div>
+      <span id="alert-title" class="text-xs uppercase font-bold tracking-widest block text-siennaBg">Submission Received</span>
+      <span id="alert-desc" class="text-xs font-light text-siennaHighlight/90 block mt-0.5 leading-relaxed">Thank you. Your studio inquiry has been sent to Sienna Muse.</span>
+    </div>
+    <button onclick="dismissAlert()" class="pl-2 focus:outline-none" aria-label="Dismiss Notification">
+      <iconify-icon icon="ph:x-light" class="text-base text-siennaHighlight/80 hover:text-siennaBg"></iconify-icon>
+    </button>
+  </div>
+
+  <!-- CONSISTENT FOOTER SECTION -->
+  <footer class="bg-siennaHighlight py-16 md:px-16 px-8 border-t border-siennaDark/5 relative z-30">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-12">
+      <!-- Info col -->
+      <div class="flex flex-col text-center md:text-left">
+        <a href="#home" class="flex flex-col items-center md:items-start select-none">
+          <span class="font-serif text-2xl tracking-wide font-medium text-siennaDark">Sienna Muse</span>
+          <span class="font-handwritten text-sm text-siennaPrimary tracking-widest pl-1 mt-0.5">earth & soul art studio</span>
+        </a>
+        <p class="text-siennaLight font-light text-xs mt-4 max-w-xs leading-relaxed">
+          Premium bohemian minimalist photographic showcases and tactile fine-art collages crafted for intentional residences.
+        </p>
+      </div>
+
+      <!-- Links col -->
+      <div class="flex flex-col md:flex-row gap-8 md:gap-16 text-center md:text-left">
+        <div class="flex flex-col">
+          <span class="text-[10px] uppercase font-bold tracking-widest text-siennaDark mb-4">Sienna Gallery</span>
+          <a href="#portfolio" class="text-xs text-siennaLight hover:text-siennaPrimary transition-colors py-1.5">Extended Portfolio</a>
+          <a href="#exhibitions" class="text-xs text-siennaLight hover:text-siennaPrimary transition-colors py-1.5">Timeline Exhibitions</a>
+          <a href="#journal" class="text-xs text-siennaLight hover:text-siennaPrimary transition-colors py-1.5">Insights Journal</a>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[10px] uppercase font-bold tracking-widest text-siennaDark mb-4">The Studio</span>
+          <a href="#about" class="text-xs text-siennaLight hover:text-siennaPrimary transition-colors py-1.5">Artist Biography</a>
+          <a href="#services" class="text-xs text-siennaLight hover:text-siennaPrimary transition-colors py-1.5">Custom Commissions</a>
+          <a href="#contact" class="text-xs text-siennaLight hover:text-siennaPrimary transition-colors py-1.5">Contact Booking</a>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[10px] uppercase font-bold tracking-widest text-siennaDark mb-4">Legalities</span>
+          <span class="text-xs text-siennaLight hover:text-siennaPrimary transition-colors py-1.5 cursor-pointer">Privacy Charter</span>
+          <span class="text-xs text-siennaLight hover:text-siennaPrimary transition-colors py-1.5 cursor-pointer">Collectors Terms</span>
+          <span class="text-xs text-siennaLight hover:text-siennaPrimary transition-colors py-1.5 cursor-pointer">Legal Notice</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright bar -->
+    <div class="max-w-7xl mx-auto border-t border-siennaDark/10 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center">
+      <span class="text-[10px] text-siennaLight font-light tracking-widest">© 2026 SIENNA MUSE STUDIO. ALL RIGHTS RESERVED. HANDMADE WITH INTENTION.</span>
+      <span class="text-[9px] tracking-widest text-siennaSecondary font-semibold uppercase">● Carmell-by-the-sea, California</span>
+    </div>
+  </footer>
+
+  <!-- Include App.js -->
+  <script src="app.js"></script>
+</body>
+</html>
