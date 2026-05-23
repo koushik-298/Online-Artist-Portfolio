@@ -15,7 +15,7 @@ const ARTWORKS = [
     medium: "Liquid acrylic ink on archival cotton rag, hand-poured fluid technique, sealed with archival UV varnish",
     year: 2025,
     dimensions: "30 x 30 inches",
-    price: "$1,600",
+    price: "$1,600", 
     status: "Available",
     image: "assets/selected_archive_fluid.png",
     popularity: 97,
@@ -1756,7 +1756,7 @@ window.requestPrivateOTP = function(projectId, email) {
 
   const link = `${window.location.origin}${window.location.pathname}#private/${projectId}?otp=${otp}`;
   // Try sending OTP via local demo server (supports real SMTP via env). Falls back to clipboard when unavailable.
-  fetch('http://localhost:3000/request-otp', {
+  fetch('/request-otp', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email, projectId, otp, link })

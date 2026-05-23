@@ -8,6 +8,7 @@ require('dotenv').config();
  * Then open index.html in a browser (or use a static server on a separate port).
  */
 
+const path = require('path');
 const express = require('express');
 const cors    = require('cors');
 const nodemailer = require('nodemailer');
@@ -18,6 +19,11 @@ const PORT = process.env.PORT || 3000;
 // ── Middleware ────────────────────────────────────────────────────────────────
 app.use(cors()); // Allow requests from the frontend (file:// or localhost:5500)
 app.use(express.json());
+app.use(express.static(path.join(__dirname)));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 // ── Transporter factory ───────────────────────────────────────────────────────
 async function createTransporter() {
